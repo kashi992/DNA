@@ -55,20 +55,41 @@ $(document).ready(function () {
 });
 
 
-jQuery(document).ready(function () {
-    var d = $(".productSteps").first()
+// jQuery(document).ready(function () {
+//     var d = $(".productSteps").first()
+//     var offsets = d.position();
+//     var positions = offsets.top;
+//     jQuery(window).scroll(function () {
+//         var scroll = jQuery(window).scrollTop();
+//         if (scroll >= positions) {
+//             jQuery(".hurryOrder").addClass("destop-visible");
+//         } else {
+//             jQuery(".hurryOrder").removeClass("destop-visible");
+//         }
+//         $(".hurryOrder").parent().css("overflow", "visible");
+//     });
+// });
+
+jQuery(document).ready(function() {
+    var d = $(".productSteps").first();
     var offsets = d.position();
     var positions = offsets.top;
-    jQuery(window).scroll(function () {
-        var scroll = jQuery(window).scrollTop();
-        if (scroll >= positions) {
-            jQuery(".hurryOrder").addClass("destop-visible");
-        } else {
-            jQuery(".hurryOrder").removeClass("destop-visible");
-        }
-        $(".hurryOrder").parents().css("overflow", "visible");
+  
+    jQuery(window).scroll(function() {
+      var scroll = jQuery(window).scrollTop();
+      var hurryOrder = jQuery(".hurryOrder");
+      var parentContainer = hurryOrder.parent();
+  
+      if (scroll >= positions) {
+        hurryOrder.addClass("destop-visible");
+        parentContainer.css("overflow-x", "visible");
+      } else {
+        hurryOrder.removeClass("destop-visible");
+        parentContainer.css("overflow-x", "hidden");
+      }
     });
-});
+  });
+  
 
 
 $(document).ready(function () {

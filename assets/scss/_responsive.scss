@@ -85,7 +85,15 @@
     .footerWrap .footerLogo {
         max-width: 210px;
     }
-
+    .footerWrap li a {
+        font-size: 16px;
+    }
+    .contactInfo {
+        max-width: 418px;
+    }
+    .footerWrap .footerDetail h2{
+        font-size: 16px;
+    }
 }
 
 // Ipad pro 
@@ -116,8 +124,7 @@
     }
 
     .productSlider .largeView {
-        height: 300px;
-        object-fit: cover;
+        height: auto;
     }
 
     .pricingBox {
@@ -220,6 +227,13 @@ width: 300px;
 
 // `lg` applies to medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
+    .pricingBox {
+        margin-right: auto;
+    }
+    .productSlider .largeView {
+        height: 70vh;
+        object-fit: fill;
+    }
     .DND_complex {
         flex-wrap: wrap;
     }
@@ -319,6 +333,13 @@ width: 300px;
 //  mobile 
 // `sm` applies to x-small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+    .pricingBox .discountPrice {
+        justify-content: center;
+        gap: 15px;
+    }
+    .productSlider .largeView {
+        height: 60vh;
+    }
     .pricingBox .addCart h2{
        font-size: 21px;
     }
@@ -453,7 +474,7 @@ width: 300px;
 
     .pricingBox .discountPrice li img {
         height: 175px;
-        width: 140px;
+        width: 175px;
     }
 
     .pricingBox .newPrice h1 {
@@ -501,6 +522,8 @@ width: 300px;
 
     .pricingBox {
         padding: 60px 15px 30px 15px;
+        max-width: 380px;
+        width: 100%;
     }
 
     .promiseWrap h1::before {
@@ -587,4 +610,16 @@ width: 300px;
     
     
 
+}
+
+// `xsm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 385.98px) {
+    .pricingBox .discountPrice li img {
+        height: 120px;
+        width: 120px;
+    }
+    .pricingBox .discountPrice{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
