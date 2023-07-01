@@ -22,6 +22,9 @@ $(document).ready(function () {
     const modifyPrice2 = $('#modifyPrice2');
     const modifyPrice3 = $('#modifyPrice3');
     const modifyShipping = $('.modifyShipping');
+    const savePrice1 = $('#savePrice1');
+    const savePrice2 = $('#savePrice2');
+    const savePrice3 = $('#savePrice3');
 
     // Add click event listener to the switch element
     switchElement.on('click', function () {
@@ -35,12 +38,18 @@ $(document).ready(function () {
             modifyPrice2.text('$64');
             modifyPrice3.text('$71');
             modifyShipping.text('+ Shipping $4.95');
+            savePrice1.text('$20');
+            savePrice2.text('$176');
+            savePrice3.text('$84');
         } else {
             // Reset the prices to their original values
             modifyPrice1.text('$79');
             modifyPrice2.text('$63');
             modifyPrice3.text('$69');
             modifyShipping.text('Free Shipping');
+            savePrice1.text('$25');
+            savePrice2.text('$180');
+            savePrice3.text('$90');
         }
     });
 });
@@ -57,6 +66,7 @@ jQuery(document).ready(function () {
         } else {
             jQuery(".hurryOrder").removeClass("destop-visible");
         }
+        $(".hurryOrder").parents().css("overflow", "visible");
     });
 });
 
@@ -66,6 +76,9 @@ $(document).ready(function () {
     let modifyPrice2 = $('#modifyPrice2');
     let modifyPrice3 = $('#modifyPrice3');
     let modifyShipping = $('.modifyShipping');
+    let savePrice1 = $('#savePrice1');
+    let savePrice2 = $('#savePrice2');
+    let savePrice3 = $('#savePrice3');
 
     $(".purchaseBtn").click(function () {
         var purchaseLi = $(this).parent();
@@ -83,12 +96,18 @@ $(document).ready(function () {
             modifyPrice2.text('$63');
             modifyPrice3.text('$69');
             modifyShipping.text('Free Shipping');
+            savePrice1.text('$20');
+            savePrice2.text('$176');
+            savePrice3.text('$84');
         } else if ($(".purchaseLi:last").hasClass('activeBox')) {
             // Update the prices for the second case
             modifyPrice1.text('$74');
             modifyPrice2.text('$64');
             modifyPrice3.text('$71');
             modifyShipping.text('+ Shipping $4.95');
+            savePrice1.text('$25');
+            savePrice2.text('$180');
+            savePrice3.text('$90');
         }
     });
 });
