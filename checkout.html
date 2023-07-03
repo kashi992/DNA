@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>DNA Complex</title>
+    <!-- Font Awsome Kit -->
+    <script src="https://kit.fontawesome.com/6e565221c4.js" crossorigin="anonymous"></script>
+    <!-- css  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- navbar start  -->
+    <header class="navWrap">
+        <div class="container">
+            <div class="navInner">
+                <div class="mainLogo">
+                    <img src="./assets/img/DNA_Logo.png" alt="">
+                </div>
+                <ul class="contactInfo">
+                    <li>
+                        <img src="./assets/img/phone-call.svg" alt="">
+                        <h2> 800-625-4211</h2>
+                    </li>
+                    <li>
+                        <img src="./assets/img/clock-img.svg" alt="">
+                        <h2> 9am-9pm EST Mon-Sun</h2>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- navbar end -->
+    <!-- checkout section start  -->
+    <section class="checkoutWrap">
+        <div class="container">
+            <div class="row customGap">
+                <div class="col-lg-6">
+                    <div class="orderSummaryAccordin d-lg-none">
+                        <div class="accordion" id="accordionOrdersummary">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <p class="hideSummary">Hide Order Summary</p>
+                                        <p class="showSummary">Show Order Summary</p>
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionOrdersummary">
+                                    <div class="accordion-body">
+                                        <ul class="quantityWrap d-lg-none">
+                                            <li>
+                                                <div>
+                                                    <div class="bottlesImg">
+                                                        <img src="./assets/img/bottle1.png" alt="">
+                                                    </div>
+                                                    <h2 class="fw700">DNA Complex </h2>
+                                                </div>
+                                                <h2 class="fw700">/ea</h2>
+                                            </li>
+                                            <li class="flex-column gap-2 align-items-start">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <h2 class="fw500">Subtotal</h2>
+                                                    <p class="subtotal"></p>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <h2 class="fw500">Shipping</h2>
+                                                    <p class="shipping"></p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h2 class="fw500">Total</h2>
+                                                <p class="total"></p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="checoutTimer flex_align">
+                        <h4>Your Order is Reserved For The Next:</h4>
+                        <img src="./assets/img/clock-pink.svg" alt="">
+                        <h3 id="desk-stopwatch">00:00</h3>
+                    </div>
+                    <div class="checkoutLeft">
+                        <h1 class="fs36">Shipping Information</h1>
+                        <h2 class="fw500 mt-2">
+                            Where do we send your DNA Complex
+                        </h2>
+                        <form action="" class="formInner">
+                            <div class="form_group w50">
+                                <input type="text" class="form-control" placeholder="First Name *">
+                            </div>
+                            <div class="form_group w50">
+                                <input type="text" class="form-control" placeholder="Last Name *">
+                            </div>
+                            <div class="form_group w-100">
+                                <input type="text" class="form-control" placeholder="Shipping Address *">
+                            </div>
+                            <div class="form_group w-100">
+                                <input type="text" class="form-control" placeholder="Apt. / Unit #">
+                            </div>
+                            <div class="form_group w50">
+                                <input type="text" class="form-control" placeholder="City *">
+                            </div>
+                            <div class="form_group w50">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option value="" selected>Select State</option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <option value="AS">American Samoa</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="CA">California</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="DC">District of Columbia</option>
+                                    <option value="FL">Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Louisiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="UT">Utah</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="WV">West Virginia</option>
+                                    <option value="WI">Wisconsin</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                            </div>
+                            <div class="form_group w50">
+                                <input type="text" class="form-control" placeholder="Zip *">
+                            </div>
+                            <div class="form_group w50">
+                                <select id="country" class="form-select" name="country" required autocomplete="off">
+                                    <option value="US" selected>USA</option>
+                                </select>
+                            </div>
+                        </form>
+                        <div class="checkBox">
+                            <input type="checkbox">
+                            <p>
+                                <b>Want to get it even FASTER?</b>
+                                Add on Priority Shipping to ensure speedy processing
+                                and handling of this order for the low cost of $14.95
+                            </p>
+                        </div>
+                        <div class="paymentInfo">
+                            <h1 class="fs36 mb-1">Payment Information</h1>
+                            <h2 class="fw500">Final step to complete your purchase</h2>
+                            <div class="paymentForm">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                        <div class="payment_according">
+                                            <h1 class="accordion-header fs36" id="headingOne">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">
+                                                    <input type="radio" id="credit-card" name="payment-methods"
+                                                        value="creditCard" checked>
+                                                    <label for="credit-card" class="ps-2">Credit Card</label>
+                                                    <img src="./assets/img/payment.png" alt="payment"
+                                                        class="payment-card">
+                                                </button>
+                                            </h1>
+                                        </div>
+                                        <div id="collapseOne" class="accordion-collapse show"
+                                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body formInner payment_form_box" id="cc-form-box">
+                                                <div class="form_group w-100">
+                                                    <label for="">Card Number</label>
+                                                    <input type="text" class="form-control"
+                                                        placeholder="1234 1234 1234 1234">
+                                                </div>
+                                                <div class="form_group w50">
+                                                    <label for="">Valid Through</label>
+                                                    <input type="text" class="form-control" placeholder="MM/YY">
+                                                </div>
+                                                <div class="form_group w50">
+                                                    <label for="">CVV</label>
+                                                    <input type="text" class="form-control" placeholder="CVV">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <h1 class="accordion-header fs36" id="headingTwo">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                <input type="radio" id="paypal" name="payment-methods" value="paypal">
+                                                <label for="paypal">
+                                                    <img src="./assets/img/paypal.png" alt="paypal" class="paypal-img">
+                                                </label>
+                                            </button>
+                                        </h1>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <div class="text-center accordion-body payment_form_box">
+                                                <img src="assets/img/paypal-box.svg" alt="" class="paypalBox">
+                                                <h2 class="fw500 text-center">After clicking "Complete Checkout", You
+                                                    Will be redirected to PayPal to Complete your
+                                                    purchase securely</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="" class="checkoutBtn flex_align">Place Your Secure Order</a>
+                            <div class="securityIcons text-center">
+                                <img src="assets/img/security.png" alt="">
+                            </div>
+                            <div class="checkBox__ flex_align">
+                                <input type="checkbox">
+                                <p>As a special gift you will be enrolled in the monthly Cosmetic Digital Magazine for
+                                    the discounted rate only $19.93, save 35%</p>
+                            </div>
+                        </div>
+                        <footer class="checkoutFooter d-lg-block d-none">
+                            <ul>
+                                <li><a href="">Terms & Conditions</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">Contact Us</a></li>
+                            </ul>
+                            <p>
+                                © 2023
+                                Seratopical Revolution Intl., LLC. All rights reserved.
+                            </p>
+                        </footer>
+                    </div>
+                </div>
+                <div class="col-lg-6 orderSummaryBg">
+                    <div class="checkoutRight">
+                        <ul class="quantityWrap d-lg-block d-none">
+                            <li>
+                                <div>
+                                    <div class="bottlesImg">
+                                        <img src="./assets/img/bottle1.png" alt="">
+                                    </div>
+                                    <h2 class="fw700">DNA Complex </h2>
+                                </div>
+                                <h2 class="fw700">/ea</h2>
+                            </li>
+                            <li class="flex-column gap-2 align-items-start">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h2 class="fw500">Subtotal</h2>
+                                    <p class="subtotal"></p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h2 class="fw500">Shipping</h2>
+                                    <p class="shipping"></p>
+                                </div>
+                            </li>
+                            <li>
+                                <h2 class="fw500">Total</h2>
+                                <p class="total"></p>
+                            </li>
+                        </ul>
+                        <div class="whyDNA">
+                            <h1 class="fs36">Why Choose DNA Complex</h1>
+                            <ul class="ingredientsWrap">
+                                <li class="ingredients-detail">
+                                    <img src="./assets/img/money.png" alt="">
+                                    <div>
+                                        <h1 class="fs32">The Seratopical 60 Day Money Back Guarantee</h1>
+                                        <h2>
+                                            We offer a simple 60 day, no-questions-asked-guarantee (less S&P). If you
+                                            decide DNA Complex isn’t for you, just contact our customer support team by
+                                            phone or email & drop the product in the mail back to us and we will process
+                                            a full refund (less S&P) with ZERO headaches or hassles.
+                                        </h2>
+                                    </div>
+                                </li>
+                                <li class="ingredients-detail">
+                                    <img src="./assets/img/lock .png" alt="">
+                                    <div>
+                                        <h1 class="fs32">Shop With Confidence</h1>
+                                        <h2>
+                                            Safe & Secure Guaranteed! You'll pay nothing if unauthorized charges are
+                                            made to your credit card as a result of shopping!
+                                        </h2>
+                                    </div>
+                                </li>
+                                <li class="ingredients-detail">
+                                    <img src="./assets/img/private.png" alt="">
+                                    <div>
+                                        <h1 class="fs32">Your Privacy Is Important</h1>
+                                        <h2>
+                                            All information is encrypted and transmitted without risk using a Secure
+                                            Socket Layer (SSL) protocol.
+                                        </h2>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="whyDNA">
+                            <h1 class="fs36">Customer reviews</h1>
+                            <ul class="testimonialsInner">
+                                <li>
+                                    <div class="customerImg flex_align d-md-flex d-none">
+                                        S
+                                    </div>
+                                    <div>
+                                        <h1 class="fs32">
+                                            Seeing Some Results
+                                        </h1>
+                                        <div>
+                                            <ul class="starsWrap d-md-flex d-none">
+                                                <li>
+                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star"></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star"></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star"></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star"></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star"></a>
+                                                </li>
+                                                <li>
+                                                    <h2 class="text-yellow">Verified Purchase</h2>
+                                                </li>
+                                            </ul>
+                                            <h2 class="fw500 mb15">
+                                                So easy to apply and does not interfere with my other skin care routine.
+                                                I've only used this for a short time but I am excited to see the long
+                                                term results. Does not feel oily, stick or heavy and does not irritate
+                                                my sensitive skin. I have not had to add or reduce my current products
+                                                to use this one and so far I have not noticed any breakouts or other
+                                                pesky things when you add a new product to your skin care regimen.
+                                            </h2>
+                                            <h2>
+                                                <div>
+                                                    <div class="customerImg flex_align d-md-none">
+                                                        S
+                                                    </div> Shannon C.
+                                                </div>
+                                                <img src="./assets/img/starsRowGreen.svg" alt="" class="d-md-none">
+                                            </h2>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li>
+                                    <div class="customerImg flex_align d-md-flex d-none">
+                                        A
+                                    </div>
+                                    <div>
+                                        <h1 class="fs32">
+                                            HEALING
+                                        </h1>
+                                        <div>
+                                            <ul class="starsWrap d-md-flex d-none">
+                                                <li>
+                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star"></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star"></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star"></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star"></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star"></a>
+                                                </li>
+                                                <li>
+                                                    <h2 class="text-yellow">Verified Purchase</h2>
+                                                </li>
+                                            </ul>
+                                            <h2 class="fw500 mb15">
+                                                My M.D. diagnosed a seborrheic keratosis on my nose last Thursday. I
+                                                used this to heal it within two days. Yesterday, a week later, he was
+                                                amazed and pleased that it was gone ! Thank you.
+                                            </h2>
+                                            <h2>
+                                                <div>
+                                                    <div class="customerImg flex_align d-md-none">
+                                                        A
+                                                    </div> Anne S.
+                                                </div>
+                                                <img src="./assets/img/starsRowGreen.svg" alt="" class="d-md-none">
+                                            </h2>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <footer class="checkoutFooter d-lg-none">
+                            <ul>
+                                <li><a href="">Terms & Conditions</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">Contact Us</a></li>
+                            </ul>
+                            <p>
+                                © 2023
+                                Seratopical Revolution Intl., LLC. All rights reserved.
+                            </p>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- checkout section end -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script src="https://fast.wistia.com/embed/medias/nxlagcfnzz.jsonp" async></script>
+    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

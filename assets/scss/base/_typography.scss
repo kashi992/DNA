@@ -5,6 +5,9 @@ h1 {
     &.fs32{
         font-size: clamp(20px, 1.8vw, 32px);
     }
+    &.fs36{
+        font-size: clamp(20px, 2.2vw, 36px);
+    }
 }
 
 h2 {

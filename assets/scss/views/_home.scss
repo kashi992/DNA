@@ -48,7 +48,7 @@
 }
 
 .complexLeft {
-    width: calc(35% - 20px);
+    width: calc(35% - 15px);
 
     .productView {
         padding: 40px 36px 22px;
@@ -58,7 +58,7 @@
 }
 
 .complexRight {
-    width: calc(65% - 20px);
+    width: calc(65% - 15px);
 
     .productTitle {
         i {
@@ -78,6 +78,7 @@
         color: #6d6e71;
         margin: 11px 0;
         font-weight: 700;
+        line-height: 1.7;
     }
 
     .productTitle {
@@ -136,14 +137,34 @@
     }
 
     .discountHeading {
-        border-top: 1px solid #e0e0e0;
         margin-top: 30px;
 
         h3 {
             font-weight: 900;
-            background-color: #fff;
-            margin: -10px auto;
-            width: 215px;
+            position: relative;
+            text-align: center;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: calc(50% - 105px);
+                height: 1px;
+                background-color: #e0e0e0;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: calc(50% - 105px);
+                height: 1px;
+                background-color: #e0e0e0;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+            }
         }
     }
 }
@@ -151,7 +172,8 @@
 // toogleRadio sec 
 .toogleRadio {
     display: flex;
-    margin: 40px 0 0 25px;
+    margin-top: 40px;
+    justify-content: center;
     align-items: center;
 
     &.activeRadio {
@@ -250,13 +272,12 @@
 // productSlider sec start 
 .productSlider {
     padding-bottom: 30px;
-    border-bottom: 2px solid #dadada;
 
     .largeView {
-     margin-bottom: 10px;
+        margin-bottom: 10px;
         width: 100%;
         height: 500px;
-    object-fit: cover;
+        object-fit: cover;
     }
 
     .slider-active {
@@ -283,7 +304,33 @@
 // .perfectSolution sec start 
 .perfectSolution {
     text-align: center;
-    padding: 25px 0;
+
+    h2 {
+        position: relative;
+        margin-bottom: 15px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: calc(50% - 50px);
+            height: 1px;
+            background-color: #dadada;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: calc(50% - 50px);
+            height: 1px;
+            background-color: #dadada;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+    }
 
     p {
         margin-top: 5px;
@@ -319,6 +366,7 @@
     justify-content: space-between;
     margin-top: 250px;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .pricingBox {
@@ -327,10 +375,17 @@
     position: relative;
     background: #fff;
     padding: 100px 20px 35px 20px;
-    width: calc(33.33% - 5px);
+    width: calc(33.33% - 7px);
     transition: .3s all;
     text-align: center;
     cursor: pointer;
+
+    &:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 625px;
+    }
 
     &:hover {
         background: #D9FEFA;
@@ -344,31 +399,37 @@
             display: block;
         }
     }
-    .offPercent{
+
+    .offPercent {
         text-align: center;
         background-size: 100% 100%;
         padding: 0 5px;
         background-repeat: no-repeat;
         width: 105px;
         height: 105px;
-        &.percent25{
+
+        &.percent25 {
             background-image: url(../img/25offBG.png);
         }
-        &.percent40{
+
+        &.percent40 {
             background-image: url(../img/40PercentBG.png);
             height: 115px;
             width: 95px;
         }
-        &.percent30{
+
+        &.percent30 {
             background-image: url(../img/30PercentBG.png);
         }
-        h1{
+
+        h1 {
             font-size: 38px;
             height: 100%;
             color: #fff;
             line-height: 1.2;
             flex-direction: column !important;
-            span{
+
+            span {
                 font-size: 20px !important;
                 display: block !important;
                 color: inherit !important;
@@ -390,7 +451,7 @@
             height: 100%;
             object-fit: contain;
         }
-        
+
     }
 
     .savingDNA {
@@ -398,8 +459,8 @@
         border-radius: 160px;
         color: #FFFFFF;
         font-weight: 900;
-        font-size: 15px;
-        padding: 7px 20px;
+        font-size: 14px;
+        padding: 7px 10px;
         margin-bottom: 11px;
         text-align: center;
         text-transform: uppercase;
@@ -505,6 +566,10 @@
                 left: 50%;
                 transform: translateX(-50%);
             }
+
+            &:hover {
+                color: #fff;
+            }
         }
     }
 
@@ -515,8 +580,10 @@
         color: #fff;
         gap: 6px;
         margin-bottom: 20px;
-        h2{
+
+        h2 {
             font-size: 24px;
+            font-weight: 700;
         }
     }
 
@@ -544,6 +611,10 @@
         width: 100%;
         display: none;
         transition: all 0.3s;
+
+        p {
+            font-weight: 700;
+        }
     }
 }
 
@@ -567,7 +638,7 @@
     }
 
     p {
-        font-weight: 700;
+        font-weight: 500;
     }
 }
 
@@ -942,7 +1013,8 @@
 
 // customerTestimonials sec start 
 .customerTestimonials {
-    padding-top: clamp(20px, 5.5vw, 100px) ;
+    padding-top: clamp(20px, 5.5vw, 100px);
+
     h1 {
         padding-bottom: clamp(20px, 5vw, 60px);
 
@@ -968,7 +1040,8 @@
         background-color: #13a89e;
         font-size: clamp(25px, 2.8vw, 50px);
     }
-    h2{
+
+    h2 {
         font-weight: 700;
     }
 
@@ -1038,9 +1111,10 @@
 }
 
 // hurryOrder sec start 
-.overflowVisible{
+.overflowVisible {
     overflow: visible !important;
 }
+
 .hurryOrder {
     background-color: #13a89e;
     padding: 15px 0px;
@@ -1115,7 +1189,7 @@
                 margin-right: 10px;
                 border-right: 2px solid #000;
                 line-height: 1;
-margin-bottom: 0;
+                margin-bottom: 0;
             }
 
             &:last-child a {
@@ -1154,5 +1228,82 @@ margin-bottom: 0;
     .copyrightText {
         text-align: center;
         font-weight: 500;
+    }
+}
+
+// pricingTable sec start 
+.pricingTable {
+ margin-top: 40px;
+ margin-bottom: 10px;
+    table{
+        margin-bottom: 0;
+    }
+    .mainLogo{
+        max-width: 80px;
+        width: 100%;
+    }
+    h2{
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .jadeClr{
+        color: #13a89e;
+    }
+    .grayClr{
+        color: #85817e;
+    }
+    th,td{
+        text-align: center;
+        vertical-align: middle;
+        border-right: 1px solid #cec9c2;
+        border-bottom: 1px solid #cec9c2 !important;
+       
+        &:last-child{
+            border-right: 0;
+        }
+        &.borderBottom0{
+            border-bottom: 0 !important;
+        }
+    }
+   
+    td{
+        padding: 10px;
+        p{
+            &:nth-of-type(1){
+                text-align: start;
+            }
+        }
+    }
+    .tick {
+        position: relative;
+        transform: rotate(45deg);
+        height: 18px;
+        width: 8px;
+        border-bottom: 2px solid #13a89e;
+        border-right: 2px solid #13a89e;
+        margin: auto;
+    }
+    .cross{
+        position: relative;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::before{
+            content: "";
+            width: 2px;
+            height: 20px;
+            background-color: #85817e;
+            transform: rotate(45deg);
+            position: absolute;
+        }
+        &::after{
+            content: "";
+            width: 2px;
+            height: 20px;
+            background-color: #85817e;
+            transform: rotate(-45deg);
+            position: absolute;
+        }
     }
 }

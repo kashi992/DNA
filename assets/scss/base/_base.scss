@@ -63,12 +63,23 @@ margin-bottom: 15px !important;
     box-shadow: none;
     border: none;
 }
+.form-select:focus{
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+.accordion-button:focus{
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
 
 .flex_align {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 .flex_bt {
     display: flex;
@@ -95,4 +106,13 @@ margin-bottom: 15px !important;
 }
 .fw700{
     font-weight: 700 !important;
+}
+.jadeBG{
+    background-color: #13a89e !important;
+}
+.whiteClr{
+    color: #fff !important;
+}
+.lineBreak{
+    margin-top: 10px;
 }

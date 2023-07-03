@@ -6,7 +6,7 @@
 'base/typography';
 
 // 2. Page-specific styles
-@import 'views/home';
+@import 'views/home', 'views/checkout';
 
 // 3. Reponsive
 @import 'responsive';
