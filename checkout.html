@@ -1,38 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <title>DNA Complex</title>
     <!-- Font Awsome Kit -->
     <script src="https://kit.fontawesome.com/6e565221c4.js" crossorigin="anonymous"></script>
     <!-- css  -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
-
     <!-- navbar start  -->
     <header class="navWrap">
         <div class="container">
             <div class="navInner">
                 <div class="mainLogo">
-                    <img src="./assets/img/DNA_Logo.png" alt="">
+                    <img src="./assets/img/DNA_Logo.png" alt="" />
                 </div>
                 <ul class="contactInfo">
                     <li>
-                        <img src="./assets/img/phone-call.svg" alt="">
-                        <h2> 800-625-4211</h2>
+                        <img src="./assets/img/phone-call.svg" alt="" />
+                        <h2>800-625-4211</h2>
                     </li>
                     <li>
-                        <img src="./assets/img/clock-img.svg" alt="">
-                        <h2> 9am-9pm EST Mon-Sun</h2>
+                        <img src="./assets/img/clock-img.svg" alt="" />
+                        <h2>9am-9pm EST Mon-Sun</h2>
                     </li>
                 </ul>
             </div>
@@ -44,14 +43,23 @@
         <div class="container">
             <div class="row customGap">
                 <div class="col-lg-6">
+                    <div class="GuarantyWrap flex_align d-lg-none">
+                        <div>
+                            <h2 class="fw600">🔒 100% Money Back Guarantee</h2>
+                        </div>
+                        <p>
+                            If you’re not satisfied, we’ll happily refund your purchase
+                            <span> (less any fees). </span>
+                        </p>
+                    </div>
                     <div class="orderSummaryAccordin d-lg-none">
                         <div class="accordion" id="accordionOrdersummary">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    <button class="accordion-button justify-content-between" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <p class="hideSummary">Hide Order Summary</p>
-                                        <p class="showSummary">Show Order Summary</p>
+                                        <p>Show Order Summary</p>
+                                        <p class="fw600">$139.00</p>
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
@@ -61,61 +69,84 @@
                                             <li>
                                                 <div>
                                                     <div class="bottlesImg">
-                                                        <img src="./assets/img/bottle1.png" alt="">
+                                                        <img src="./assets/img/bottle1.png" alt="" />
                                                     </div>
-                                                    <h2 class="fw700">DNA Complex </h2>
+                                                    <div>
+                                                        <h2 class="fw700 mb-2">DNA Complex</h2>
+                                                        <p>1 bottle</p>
+                                                    </div>
                                                 </div>
-                                                <h2 class="fw700">/ea</h2>
+                                                <h2 class="fw600">$134.00</h2>
                                             </li>
                                             <li class="flex-column gap-2 align-items-start">
-                                                <div class="d-flex justify-content-between align-items-center">
+                                                <div class="d-flex justify-content-between align-items-center w-100">
                                                     <h2 class="fw500">Subtotal</h2>
-                                                    <p class="subtotal"></p>
+                                                    <p class="subtotal">$134.00</p>
                                                 </div>
-                                                <div class="d-flex justify-content-between align-items-center">
+                                                <div class="d-flex justify-content-between align-items-center w-100">
                                                     <h2 class="fw500">Shipping</h2>
-                                                    <p class="shipping"></p>
+                                                    <p class="shipping">$5.00</p>
                                                 </div>
                                             </li>
                                             <li>
                                                 <h2 class="fw500">Total</h2>
-                                                <p class="total"></p>
+                                                <div class="totalAmount">
+                                                    <h3>USD</h3>
+                                                    <h2>$139.00</h2>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    This is a one-time payment
+                                                </p>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
                     <div class="checoutTimer flex_align">
-                        <h4>Your Order is Reserved For The Next:</h4>
+                        <!-- <h4>Your Order is Reserved For The Next:</h4>
                         <img src="./assets/img/clock-pink.svg" alt="">
-                        <h3 id="desk-stopwatch">00:00</h3>
+                        <h3 id="desk-stopwatch">00:00</h3> -->
+                        <p>100,000+ ❤ Transformations and Growing</p>
                     </div>
                     <div class="checkoutLeft">
                         <h1 class="fs36">Shipping Information</h1>
-                        <h2 class="fw500 mt-2">
-                            Where do we send your DNA Complex
-                        </h2>
+                        <h2 class="fw500 mt-2">Where do we send your DNA Complex</h2>
                         <form action="" class="formInner">
-                            <div class="form_group w50">
-                                <input type="text" class="form-control" placeholder="First Name *">
+                            <div class="form_group labelHide w50">
+                                <label for="">First Name</label>
+                                <input type="text" class="form-control" placeholder="First Name *" />
                             </div>
-                            <div class="form_group w50">
-                                <input type="text" class="form-control" placeholder="Last Name *">
+                            <div class="form_group labelHide w50">
+                                <label for="">Last Name</label>
+                                <input type="text" class="form-control" placeholder="Last Name *" />
                             </div>
-                            <div class="form_group w-100">
-                                <input type="text" class="form-control" placeholder="Shipping Address *">
+                            <div class="form_group labelHide w50">
+                                <label for="">Email</label>
+                                <input type="email" class="form-control" placeholder="Email *" />
                             </div>
-                            <div class="form_group w-100">
-                                <input type="text" class="form-control" placeholder="Apt. / Unit #">
+                            <div class="form_group labelHide w50">
+                                <label for="">Phone</label>
+                                <input type="number" class="form-control" placeholder="Phone *" />
                             </div>
-                            <div class="form_group w50">
-                                <input type="text" class="form-control" placeholder="City *">
+                            <div class="form_group labelHide w-100">
+                                <label for="">Address</label>
+                                <input type="text" class="form-control" placeholder="Shipping Address *" />
                             </div>
-                            <div class="form_group w50">
+                            <div class="form_group labelHide w-100">
+                                <label for="">Apt./Unit</label>
+                                <input type="text" class="form-control" placeholder="Apt. / Unit #" />
+                            </div>
+                            <div class="form_group labelHide w50">
+                                <label for="">City</label>
+                                <input type="text" class="form-control" placeholder="City *" />
+                            </div>
+                            <div class="form_group labelHide w50">
+                                <label for="">State</label>
                                 <select class="form-select" aria-label="Default select example">
                                     <option value="" selected>Select State</option>
                                     <option value="AL">Alabama</option>
@@ -172,21 +203,29 @@
                                     <option value="WY">Wyoming</option>
                                 </select>
                             </div>
-                            <div class="form_group w50">
-                                <input type="text" class="form-control" placeholder="Zip *">
+                            <div class="form_group labelHide w50">
+                                <label for="">Zip</label>
+                                <input type="text" class="form-control" placeholder="Zip *" />
                             </div>
-                            <div class="form_group w50">
+                            <div class="form_group labelHide w50">
+                                <label for="">country</label>
                                 <select id="country" class="form-select" name="country" required autocomplete="off">
                                     <option value="US" selected>USA</option>
                                 </select>
                             </div>
                         </form>
                         <div class="checkBox">
-                            <input type="checkbox">
+                            <input type="checkbox" />
                             <p>
-                                <b>Want to get it even FASTER?</b>
-                                Add on Priority Shipping to ensure speedy processing
-                                and handling of this order for the low cost of $14.95
+                                <b>Get 10% off your next order + insider deals when you sign
+                                    up for texts</b>
+                                By checking this box, you agree to receive recurring automated
+                                promotional and personalized marketing text messages (e.g.
+                                cart reminders) from Dr. Kellyann at the cell number used when
+                                signing up. Consent is not a condition of any purchase. Reply
+                                HELP for help and STOP to cancel. Msg frequency varies. Msg &
+                                data rates may apply. View <a href="">Terms</a> &
+                                <a href="">Privacy</a>
                             </p>
                         </div>
                         <div class="paymentInfo">
@@ -201,10 +240,24 @@
                                                     data-bs-target="#collapseOne" aria-expanded="true"
                                                     aria-controls="collapseOne">
                                                     <input type="radio" id="credit-card" name="payment-methods"
-                                                        value="creditCard" checked>
+                                                        value="creditCard" checked />
                                                     <label for="credit-card" class="ps-2">Credit Card</label>
-                                                    <img src="./assets/img/payment.png" alt="payment"
-                                                        class="payment-card">
+                                                    <!-- <img src="./assets/img/payment.png" alt="payment"
+                                                        class="payment-card"> -->
+                                                    <ul class="payment-card flex_align">
+                                                        <li>
+                                                            <img src="./assets/img/visaIcon.png" alt="" />
+                                                        </li>
+                                                        <li>
+                                                            <img src="./assets/img/masterCard.png" alt="" />
+                                                        </li>
+                                                        <li>
+                                                            <img src="./assets/img/discoverIcon.png" alt="" />
+                                                        </li>
+                                                        <li>
+                                                            <img src="./assets/img/americanExpress.png" alt="" />
+                                                        </li>
+                                                    </ul>
                                                 </button>
                                             </h1>
                                         </div>
@@ -214,15 +267,15 @@
                                                 <div class="form_group w-100">
                                                     <label for="">Card Number</label>
                                                     <input type="text" class="form-control"
-                                                        placeholder="1234 1234 1234 1234">
+                                                        placeholder="1234 1234 1234 1234" />
                                                 </div>
                                                 <div class="form_group w50">
                                                     <label for="">Valid Through</label>
-                                                    <input type="text" class="form-control" placeholder="MM/YY">
+                                                    <input type="text" class="form-control" placeholder="MM/YY" />
                                                 </div>
                                                 <div class="form_group w50">
                                                     <label for="">CVV</label>
-                                                    <input type="text" class="form-control" placeholder="CVV">
+                                                    <input type="text" class="form-control" placeholder="CVV" />
                                                 </div>
                                             </div>
                                         </div>
@@ -233,44 +286,61 @@
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                                                 aria-expanded="false" aria-controls="collapseTwo">
-                                                <input type="radio" id="paypal" name="payment-methods" value="paypal">
+                                                <input type="radio" id="paypal" name="payment-methods" value="paypal" />
                                                 <label for="paypal">
-                                                    <img src="./assets/img/paypal.png" alt="paypal" class="paypal-img">
+                                                    <img src="./assets/img/paypal.png" alt="paypal"
+                                                        class="paypal-img" />
                                                 </label>
                                             </button>
                                         </h1>
                                         <div id="collapseTwo" class="accordion-collapse collapse"
                                             aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                             <div class="text-center accordion-body payment_form_box">
-                                                <img src="assets/img/paypal-box.svg" alt="" class="paypalBox">
-                                                <h2 class="fw500 text-center">After clicking "Complete Checkout", You
-                                                    Will be redirected to PayPal to Complete your
-                                                    purchase securely</h2>
+                                                <img src="assets/img/paypal-box.svg" alt="" class="paypalBox" />
+                                                <h2 class="fw500 text-center">
+                                                    After clicking "Complete Checkout", You Will be
+                                                    redirected to PayPal to Complete your purchase
+                                                    securely
+                                                </h2>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="" class="checkoutBtn flex_align">Place Your Secure Order</a>
+                            <a href="" class="checkoutBtn flex_align">Place Your Secure Order <span
+                                    class="chevronRight"></span></a>
                             <div class="securityIcons text-center">
-                                <img src="assets/img/security.png" alt="">
+                                <img src="assets/img/security.png" alt="" />
                             </div>
-                            <div class="checkBox__ flex_align">
-                                <input type="checkbox">
-                                <p>As a special gift you will be enrolled in the monthly Cosmetic Digital Magazine for
-                                    the discounted rate only $19.93, save 35%</p>
-                            </div>
+                            <!-- <div class="checkBox__ flex_align">
+                                <input type="checkbox" />
+                                <p>
+                                    As a special gift you will be enrolled in the monthly
+                                    Cosmetic Digital Magazine for the discounted rate only
+                                    $19.93, save 35%
+                                </p>
+                            </div> -->
+                            <a href="" class="flex_align securePayment"><svg xmlns="http://www.w3.org/2000/svg"
+                                height="1em" viewBox="0 0 448 512">
+                                <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z" />
+                            </svg>Secure Payment</a>
                         </div>
                         <footer class="checkoutFooter d-lg-block d-none">
-                            <ul>
+                            <!-- <ul>
                                 <li><a href="">Terms & Conditions</a></li>
                                 <li><a href="">Privacy Policy</a></li>
                                 <li><a href="">Contact Us</a></li>
+                            </ul> -->
+                            <ul>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li>-</li>
+                                <li><a href="">Terms & Conditions</a></li>
                             </ul>
-                            <p>
-                                © 2023
-                                Seratopical Revolution Intl., LLC. All rights reserved.
-                            </p>
+                            <!-- <p>
+                                © 2023 Seratopical Revolution Intl., LLC. All rights reserved.
+                            </p> -->
                         </footer>
                     </div>
                 </div>
@@ -280,174 +350,192 @@
                             <li>
                                 <div>
                                     <div class="bottlesImg">
-                                        <img src="./assets/img/bottle1.png" alt="">
+                                        <img src="./assets/img/bottle1.png" alt="" />
                                     </div>
-                                    <h2 class="fw700">DNA Complex </h2>
+                                    <div>
+                                        <h2 class="fw700 mb-2">DNA Complex</h2>
+                                        <p>1 bottle</p>
+                                    </div>
                                 </div>
-                                <h2 class="fw700">/ea</h2>
+                                <h2 class="fw700">$134.00</h2>
                             </li>
                             <li class="flex-column gap-2 align-items-start">
-                                <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-between align-items-center w-100">
                                     <h2 class="fw500">Subtotal</h2>
-                                    <p class="subtotal"></p>
+                                    <p class="subtotal">$134.00</p>
                                 </div>
-                                <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-between align-items-center w-100">
                                     <h2 class="fw500">Shipping</h2>
-                                    <p class="shipping"></p>
+                                    <p class="shipping">$5.00</p>
                                 </div>
                             </li>
                             <li>
                                 <h2 class="fw500">Total</h2>
-                                <p class="total"></p>
+                                <div class="totalAmount">
+                                    <h3>USD</h3>
+                                    <h2>$139.00</h2>
+                                </div>
+                            </li>
+                            <li>
+                                <p>
+                                    Ships in 7 to 10 days <br />
+                                    This is a one-time payment
+                                </p>
                             </li>
                         </ul>
-                        <div class="whyDNA">
+                        <div class="GuarantyWrap flex_align d-lg-flex d-none">
+                            <div>
+                                <h1 class="fs36">100%</h1>
+                                <h2>Guaranteed</h2>
+                            </div>
+                            <p>
+                                If you’re not satisfied, we’ll happily refund your purchase
+                                <span> (less any fees). </span>
+                            </p>
+                        </div>
+                        <!-- <div class="whyDNA">
                             <h1 class="fs36">Why Choose DNA Complex</h1>
                             <ul class="ingredientsWrap">
                                 <li class="ingredients-detail">
-                                    <img src="./assets/img/money.png" alt="">
+                                    <img src="./assets/img/money.png" alt="" />
                                     <div>
-                                        <h1 class="fs32">The Seratopical 60 Day Money Back Guarantee</h1>
+                                        <h1 class="fs32">
+                                            The Seratopical 60 Day Money Back Guarantee
+                                        </h1>
                                         <h2>
-                                            We offer a simple 60 day, no-questions-asked-guarantee (less S&P). If you
-                                            decide DNA Complex isn’t for you, just contact our customer support team by
-                                            phone or email & drop the product in the mail back to us and we will process
-                                            a full refund (less S&P) with ZERO headaches or hassles.
+                                            We offer a simple 60 day, no-questions-asked-guarantee
+                                            (less S&P). If you decide DNA Complex isn’t for you,
+                                            just contact our customer support team by phone or email
+                                            & drop the product in the mail back to us and we will
+                                            process a full refund (less S&P) with ZERO headaches or
+                                            hassles.
                                         </h2>
                                     </div>
                                 </li>
                                 <li class="ingredients-detail">
-                                    <img src="./assets/img/lock .png" alt="">
+                                    <img src="./assets/img/lock .png" alt="" />
                                     <div>
                                         <h1 class="fs32">Shop With Confidence</h1>
                                         <h2>
-                                            Safe & Secure Guaranteed! You'll pay nothing if unauthorized charges are
-                                            made to your credit card as a result of shopping!
+                                            Safe & Secure Guaranteed! You'll pay nothing if
+                                            unauthorized charges are made to your credit card as a
+                                            result of shopping!
                                         </h2>
                                     </div>
                                 </li>
                                 <li class="ingredients-detail">
-                                    <img src="./assets/img/private.png" alt="">
+                                    <img src="./assets/img/private.png" alt="" />
                                     <div>
                                         <h1 class="fs32">Your Privacy Is Important</h1>
                                         <h2>
-                                            All information is encrypted and transmitted without risk using a Secure
-                                            Socket Layer (SSL) protocol.
+                                            All information is encrypted and transmitted without
+                                            risk using a Secure Socket Layer (SSL) protocol.
                                         </h2>
                                     </div>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                         <div class="whyDNA">
                             <h1 class="fs36">Customer reviews</h1>
                             <ul class="testimonialsInner">
                                 <li>
-                                    <div class="customerImg flex_align d-md-flex d-none">
-                                        S
-                                    </div>
+                                    <div class="customerImg flex_align d-md-flex d-none">S</div>
                                     <div>
-                                        <h1 class="fs32">
-                                            Seeing Some Results
-                                        </h1>
+                                        <h1 class="fs32">Seeing Some Results</h1>
                                         <div>
                                             <ul class="starsWrap d-md-flex d-none">
                                                 <li>
-                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star"></a>
+                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star" /></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star"></a>
+                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star" /></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star"></a>
+                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star" /></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star"></a>
+                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star" /></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star"></a>
+                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star" /></a>
                                                 </li>
                                                 <li>
                                                     <h2 class="text-yellow">Verified Purchase</h2>
                                                 </li>
                                             </ul>
                                             <h2 class="fw500 mb15">
-                                                So easy to apply and does not interfere with my other skin care routine.
-                                                I've only used this for a short time but I am excited to see the long
-                                                term results. Does not feel oily, stick or heavy and does not irritate
-                                                my sensitive skin. I have not had to add or reduce my current products
-                                                to use this one and so far I have not noticed any breakouts or other
-                                                pesky things when you add a new product to your skin care regimen.
+                                                So easy to apply and does not interfere with my other
+                                                skin care routine. I've only used this for a short
+                                                time but I am excited to see the long term results.
+                                                Does not feel oily, stick or heavy and does not
+                                                irritate my sensitive skin. I have not had to add or
+                                                reduce my current products to use this one and so far
+                                                I have not noticed any breakouts or other pesky things
+                                                when you add a new product to your skin care regimen.
                                             </h2>
                                             <h2>
                                                 <div>
                                                     <div class="customerImg flex_align d-md-none">
                                                         S
-                                                    </div> Shannon C.
+                                                    </div>
+                                                    Shannon C.
                                                 </div>
-                                                <img src="./assets/img/starsRowGreen.svg" alt="" class="d-md-none">
+                                                <img src="./assets/img/starsRowGreen.svg" alt="" class="d-md-none" />
                                             </h2>
                                         </div>
                                     </div>
-
                                 </li>
                                 <li>
-                                    <div class="customerImg flex_align d-md-flex d-none">
-                                        A
-                                    </div>
+                                    <div class="customerImg flex_align d-md-flex d-none">A</div>
                                     <div>
-                                        <h1 class="fs32">
-                                            HEALING
-                                        </h1>
+                                        <h1 class="fs32">HEALING</h1>
                                         <div>
                                             <ul class="starsWrap d-md-flex d-none">
                                                 <li>
-                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star"></a>
+                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star" /></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star"></a>
+                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star" /></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star"></a>
+                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star" /></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star"></a>
+                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star" /></a>
                                                 </li>
                                                 <li>
-                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star"></a>
+                                                    <a href="#0"><img src="./assets/img/star.svg" alt="star" /></a>
                                                 </li>
                                                 <li>
                                                     <h2 class="text-yellow">Verified Purchase</h2>
                                                 </li>
                                             </ul>
                                             <h2 class="fw500 mb15">
-                                                My M.D. diagnosed a seborrheic keratosis on my nose last Thursday. I
-                                                used this to heal it within two days. Yesterday, a week later, he was
-                                                amazed and pleased that it was gone ! Thank you.
+                                                My M.D. diagnosed a seborrheic keratosis on my nose
+                                                last Thursday. I used this to heal it within two days.
+                                                Yesterday, a week later, he was amazed and pleased
+                                                that it was gone ! Thank you.
                                             </h2>
                                             <h2>
                                                 <div>
                                                     <div class="customerImg flex_align d-md-none">
                                                         A
-                                                    </div> Anne S.
+                                                    </div>
+                                                    Anne S.
                                                 </div>
-                                                <img src="./assets/img/starsRowGreen.svg" alt="" class="d-md-none">
+                                                <img src="./assets/img/starsRowGreen.svg" alt="" class="d-md-none" />
                                             </h2>
                                         </div>
                                     </div>
-
                                 </li>
                             </ul>
                         </div>
                         <footer class="checkoutFooter d-lg-none">
                             <ul>
-                                <li><a href="">Terms & Conditions</a></li>
                                 <li><a href="">Privacy Policy</a></li>
-                                <li><a href="">Contact Us</a></li>
+                                <li>-</li>
+                                <li><a href="">Terms & Conditions</a></li>
                             </ul>
-                            <p>
-                                © 2023
-                                Seratopical Revolution Intl., LLC. All rights reserved.
-                            </p>
                         </footer>
                     </div>
                 </div>
@@ -460,8 +548,8 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
@@ -473,7 +561,6 @@
     <script src="https://fast.wistia.com/embed/medias/nxlagcfnzz.jsonp" async></script>
     <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
     <script src="assets/js/main.js"></script>
-
 </body>
 
 </html>

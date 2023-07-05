@@ -149,15 +149,6 @@
         padding: 15px;
     }
 
-    .formInner .form-control,
-    .formInner .form-select {
-        height: 40px;
-        font-size: 16px;
-    }
-
-    .paymentForm .accordion-button {
-        padding: 8px 15px;
-    }
 
     .checkBox {
         padding: 10px;
@@ -370,20 +361,21 @@
         font-size: 22px;
     }
 
-    .whyDNA h1::before {
-        width: 75px;
-    }
-
-    .whyDNA h1::after {
-        width: 75px;
-    }
-
     .whyDNA:last-child h1::before {
         width: 115px;
     }
 
     .whyDNA:last-child h1::after {
         width: 115px;
+    }
+    .productSteps .skin-type .skin-type-part img{
+        width: 35px;
+    }
+    .productSteps .skin-type .skin-type-part h2{
+     font-size: 15px;
+    }
+    .productSteps .skin-type .skin-type-part {
+        gap: 15px;
     }
 }
 
@@ -396,8 +388,11 @@
     }
 
     .productSlider .largeView {
-        height: 70vh;
-        object-fit: fill;
+        height: 80vh;
+        object-fit: contain;
+    }
+    .productSlider .smallView {
+        height: 200px;
     }
 
     .DND_complex {
@@ -518,8 +513,6 @@
     }
 
     .quantityWrap li {
-        padding-bottom: 8px;
-        margin-bottom: 8px;
         border-width: 1px;
     }
 
@@ -599,7 +592,22 @@
         min-width: 70px;
         min-height: 70px;
     }
-
+    .GuarantyWrap {
+        max-width: 100%;
+        border: 0;
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 0;
+    }
+    .GuarantyWrap p {
+        max-width: 100%;
+    }
+    .paymentForm .payment_form_box .form_group.w50{
+        width: calc(50% - 5px) !important;
+    }
+    .productSteps .skin-type{
+        margin-top: 0;
+    }
 
 }
 
@@ -616,7 +624,10 @@
     }
 
     .productSlider .largeView {
-        height: 50vh;
+        object-fit: cover;
+    }
+    .productSlider .smallView {
+        height: 135px;
     }
 
     .pricingBox .addCart h2 {
@@ -891,7 +902,7 @@
             }
 
             a {
-                font-size: 11px;
+                font-size: 14px;
                 padding: 12px 3px;
                 background-color: inherit;
                 color: inherit;
@@ -960,11 +971,6 @@
         font-size: 16px;
     }
 
-    .paymentForm .accordion-button {
-        padding: 8px;
-        height: 44px;
-    }
-
     .paymentForm .payment_form_box .paypalBox {
         max-width: 190px;
     }
@@ -972,15 +978,6 @@
     .paymentForm .payment_form_box h2 {
         padding-top: 10px;
     }
-
-    .whyDNA h1::after {
-        width: 10%;
-    }
-
-    .whyDNA h1::before {
-        width: 10%;
-    }
-
     .whyDNA .ingredientsWrap li {
         margin-top: 0;
     }
@@ -996,8 +993,6 @@
     }
 
     .checkoutFooter ul li {
-        padding-right: 8px;
-        margin-right: 8px;
         font-size: 14px;
     }
 
@@ -1016,6 +1011,49 @@
     }
     .quantityWrap li .bottlesImg::before {
       font-size: 11px;
+    }
+    .mainLogo {
+        max-width: 90px;
+    }
+    .quantityWrap li:nth-of-type(1) div:nth-of-type(1) {
+        gap: 15px;
+    }
+    .orderSummaryAccordin .accordion-body{
+       padding-left: 7px;padding-right: 7px;
+    }
+    .GuarantyWrap{
+        padding-top: 0;
+    }
+    .paymentForm .payment_form_box {
+        padding: 15px 8px;
+    }
+    .securePayment svg {
+        width: 14px;
+        height: 14px;
+    }
+    .securePayment {
+        height: 40px;
+        max-width: 165px;
+    }
+    .orderSummaryAccordin .accordion-button {
+     padding-right: 0;
+    }
+    .whyDNA h1::before {
+        width: calc(50% - 90px) !important;
+    }
+    .whyDNA h1::after {
+        width: calc(50% - 90px) !important;
+    }
+    h2.productDescription {
+        line-height: 1.6;
+    }
+    .accordion-flush .accordion-body{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .accordianMain .accordion-button {
+        gap: 15px;
+        line-height: 1.3;
     }
 }
 

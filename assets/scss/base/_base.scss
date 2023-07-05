@@ -11,7 +11,9 @@ body,
 html {
     overflow-x: hidden;
 }
-
+body.overflowX_V{
+    overflow-x: visible !important;
+}
 * {
     box-sizing: border-box;
 }
@@ -115,4 +117,13 @@ margin-bottom: 15px !important;
 }
 .lineBreak{
     margin-top: 10px;
+}
+.chevronRight{
+    border-style: solid;
+    border-width: 3px 3px 0 0;
+    content: "";
+    display: inline-block;
+    height: 15px;
+    transform: rotate(45deg);
+    width: 15px;
 }

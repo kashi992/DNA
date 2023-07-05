@@ -134,6 +134,38 @@ $(document).ready(function () {
 });
 
 
+$(document).ready(function() {
+  const section1 = $('#DNAComplexSec');
+  const section2 = $('#clientNameInteract');
+
+  // Intersection Observer options
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0
+  };
+
+  // Intersection Observer callback function
+  const callback = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        section2.addClass('clientNameClass');
+        $('body').addClass('overflowX_V');
+      } else {
+        section2.removeClass('clientNameClass');
+        $('body').removeClass('overflowX_V');
+      }
+    });
+  };
+
+  // Create Intersection Observer instance
+  const observer = new IntersectionObserver(callback, options);
+
+  // Start observing section1
+  observer.observe(section1[0]);
+});
+
+
 // check out page start 
 
 var spd = 100;
@@ -155,3 +187,23 @@ setInterval(function () {
   document.getElementById('desk-stopwatch').innerHTML = result;
   document.getElementById('mob-stopwatch').innerHTML = result;
 }, spd);
+
+
+$(document).ready(function () {
+  // Event listener for box click
+  $('.labelHide').click(function () {
+    // Remove active class from all boxes
+    $('.labelHide').removeClass('labelShow');
+    // Add active class to the clicked box
+    $(this).addClass('labelShow');
+  });
+
+  // Event listener for clicks outside form_group
+  $(document).on('click', function (event) {
+    if (!$(event.target).closest('.labelHide').length) {
+      // Remove active class from all boxes
+      $('.labelHide').removeClass('labelShow');
+    }
+  });
+});
+

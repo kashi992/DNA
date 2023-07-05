@@ -21,7 +21,7 @@
 
     h2 {
         color: #000;
-        font-weight: 700;
+        font-weight: 600;
     }
 }
 
@@ -312,7 +312,7 @@
         &::before {
             position: absolute;
             content: "";
-            width: calc(50% - 50px);
+            width: calc(50% - 70px);
             height: 1px;
             background-color: #dadada;
             top: 50%;
@@ -323,7 +323,7 @@
         &::after {
             position: absolute;
             content: "";
-            width: calc(50% - 50px);
+            width: calc(50% - 70px);
             height: 1px;
             background-color: #dadada;
             top: 50%;
@@ -622,6 +622,11 @@
 .clientName {
     text-align: center;
     margin-top: 170px;
+    &.clientNameClass {
+        position: sticky;
+     top: 0;
+     transition: all 0.3s;
+    }
 
     h4 {
         font-size: 19px;
@@ -634,7 +639,7 @@
         color: #4ea69e;
         margin-top: 25px;
         text-align: center;
-        font-size: 18px;
+        font-size: 24px;
     }
 
     p {
@@ -786,7 +791,7 @@
 // .productSteps sec start 
 .productSteps {
     .pillsTitle {
-        font-size: clamp(20px, 1.8vw, 32px);
+        font-size: clamp(21px, 1.8vw, 32px);
         margin: 42px 30px 30px 0;
         text-align: end;
     }
@@ -1233,47 +1238,57 @@
 
 // pricingTable sec start 
 .pricingTable {
- margin-top: 40px;
- margin-bottom: 10px;
-    table{
+    margin-top: 40px;
+    margin-bottom: 10px;
+
+    table {
         margin-bottom: 0;
     }
-    .mainLogo{
+
+    .mainLogo {
         max-width: 80px;
         width: 100%;
     }
-    h2{
+
+    h2 {
         font-size: 24px;
         font-weight: 600;
     }
-    .jadeClr{
+
+    .jadeClr {
         color: #13a89e;
     }
-    .grayClr{
+
+    .grayClr {
         color: #85817e;
     }
-    th,td{
+
+    th,
+    td {
         text-align: center;
         vertical-align: middle;
         border-right: 1px solid #cec9c2;
         border-bottom: 1px solid #cec9c2 !important;
-       
-        &:last-child{
+
+        &:last-child {
             border-right: 0;
         }
-        &.borderBottom0{
+
+        &.borderBottom0 {
             border-bottom: 0 !important;
         }
     }
-   
-    td{
+
+    td {
         padding: 10px;
-        p{
-            &:nth-of-type(1){
+
+        p {
+            &:nth-of-type(1) {
                 text-align: start;
             }
         }
     }
+
     .tick {
         position: relative;
         transform: rotate(45deg);
@@ -1283,13 +1298,15 @@
         border-right: 2px solid #13a89e;
         margin: auto;
     }
-    .cross{
+
+    .cross {
         position: relative;
         text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
-        &::before{
+
+        &::before {
             content: "";
             width: 2px;
             height: 20px;
@@ -1297,7 +1314,8 @@
             transform: rotate(45deg);
             position: absolute;
         }
-        &::after{
+
+        &::after {
             content: "";
             width: 2px;
             height: 20px;

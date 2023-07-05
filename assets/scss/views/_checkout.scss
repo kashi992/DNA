@@ -1,23 +1,24 @@
 // checkoutWrap sec start 
 .checoutTimer {
-    background-color: #cde6e5;
-    border: 2px solid #13A89E;
+    background-color: #13A89E;
+    padding: 10px;
     border-radius: 5px;
     text-align: center;
-    padding: 15px 0px;
-    gap: 5px;
     margin-bottom: clamp(30px, 2.8vw, 50px);
 
-    h4 {
-        font-size: 18px;
-        line-height: 1;
-        font-weight: 600;
-    }
+    // h4 {
+    //     font-size: 18px;
+    //     line-height: 1;
+    //     font-weight: 600;
+    // }
 
-    h3 {
-        font-size: 20px;
-        color: #ec489e;
-        font-weight: 700;
+    // h3 {
+    //     font-size: 20px;
+    //     color: #ec489e;
+    //     font-weight: 700;
+    // }
+    p {
+        color: #fff;
     }
 }
 
@@ -35,11 +36,42 @@
 
     .form-control,
     .form-select {
-        height: 48px;
+        height: 55px;
         border: 1px solid #d7d7d7;
         border-radius: 5px;
-        padding: 0 12px;
+        padding: 10px 10px 8px 10px;
+        // padding: 0 12px;
         font-size: 17px;
+    }
+
+    .labelHide {
+        position: relative;
+
+        label {
+            display: none;
+        }
+
+        &.labelShow {
+            label {
+                display: block;
+                transition: all 0.3s;
+                position: absolute;
+                z-index: 1;
+                left: 7px;
+                top: 2px;
+                color: #212529;
+                pointer-events: none;
+                font-size: 12px;
+                line-height: 1.2;
+            }
+
+            input {
+                &::placeholder {
+                    display: none;
+                    visibility: hidden;
+                }
+            }
+        }
     }
 }
 
@@ -59,6 +91,11 @@
         border-radius: 2px;
         border: 1px solid #dbdbdb;
         margin-right: 7px;
+    }
+
+    p a {
+        color: inherit;
+        text-decoration: underline;
     }
 }
 
@@ -85,17 +122,29 @@
     }
 
     .payment_according label {
-        pointer-events: auto;
         font-size: 24px;
         color: #000;
+        position: relative;
+        z-index: 9;
+
     }
 
     label {
         width: 100%;
+        cursor: pointer;
     }
 
     .payment-card {
-        margin-left: auto;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 0;
+        gap: 4px;
+
+        img {
+            width: 30px;
+        }
     }
 
     .accordion-header {
@@ -103,9 +152,11 @@
     }
 
     .payment_form_box {
-        padding: 20px;
+        padding: 25px 20px;
         margin-top: 0;
         border-top: 1px solid #d7d7d7;
+        background: rgb(250, 250, 250);
+        margin-bottom: 0;
 
         label {
             font-size: 18px;
@@ -134,7 +185,8 @@
 .checkoutBtn {
     height: 84px;
     width: 100%;
-    background: #30bb0b;
+    // background: #30bb0b;
+    background: #ec489e;
     margin-top: 25px;
     margin-bottom: 15px;
     border-radius: 10px;
@@ -142,7 +194,14 @@
     line-height: 1.2;
     font-weight: 700;
     color: #fff;
-    text-shadow: 1px 1px #2cab0a;
+    text-shadow: 1px 1px #ec489e;
+    position: relative;
+    gap: 7px;
+
+    &:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
 }
 
 .checkBox__ {
@@ -150,33 +209,53 @@
     gap: 10px;
     margin-top: 15px;
 }
+.securePayment {
+    margin: 20px 0;
+    gap: 8px;
+    color: rgb(127, 127, 127);
+    font-size: 16px;
+    line-height: 1;
+    height: 43px;
+    border: 1px solid rgb(199, 199, 199);
+    border-radius: 4px;
+    max-width: 190px;
+    width: 100%;
 
+    svg {
+        fill: rgb(127, 127, 127);
+        width: 18px;
+        height: 18px;
+    }
+}
 .checkoutFooter {
-    padding-top: 25px;
+    // padding-top: 25px;
     background: #fff;
-    margin-top: clamp(25px, 2.8vw, 45px);
-    border-top: 1px solid #d7d7d7;
+    // margin-top: clamp(25px, 2.8vw, 45px);
+    // border-top: 1px solid #d7d7d7;
     text-align: center;
+
+  
 
     ul {
         display: flex;
-        justify-content: center;
         margin-bottom: 10px;
+        gap: 8px;
+        justify-content: start;
 
         li {
-            padding-right: 12px;
-            margin-right: 12px;
-            border-right: 1.5px solid #000;
+            // padding-right: 12px;
+            // margin-right: 12px;
+            // border-right: 1.5px solid #000;
             font-size: 16px;
             line-height: 1;
             color: #000;
             text-align: center;
 
-            &:last-of-type {
-                border-right: 0;
-                padding-right: 0;
-                margin-right: 0;
-            }
+            // &:last-of-type {
+            //     border-right: 0;
+            //     padding-right: 0;
+            //     margin-right: 0;
+            // }
 
             a {
                 font-size: inherit;
@@ -219,6 +298,14 @@
 
         &:last-child {
             padding-bottom: 0;
+            margin-bottom: 0;
+            border-bottom: 0;
+            p{
+                padding-top: 8px;
+            }
+        }
+        &:nth-last-of-type(2){
+               padding-bottom: 0;
             margin-bottom: 0;
             border-bottom: 0;
         }
@@ -267,20 +354,60 @@
             }
         }
     }
+
+    .totalAmount {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+
+        h2,
+        h3 {
+            line-height: 1;
+            font-weight: 600;
+        }
+    }
+}
+
+.GuarantyWrap {
+ max-width: 500px;
+ width: 100%;
+ gap: 15px;
+    border: 1px solid rgb(199, 199, 199);
+    border-radius: 4px;
+    margin-top: 30px;
+    padding: 10px;
+    color: rgb(127, 127, 127);
+
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        font-size: 14px;
+        max-width: 220px;
+        width: 100%;
+        text-align: center;
+        span {
+            font-size: 11px;
+        }
+    }
 }
 
 .whyDNA {
     padding-top: clamp(25px, 2.8vw, 50px);
-    &:last-child{
-        h1{
-            &::before{
-                width: 165px;
-            }
-            &::after{
-                width: 165px;
-            }
-        }
-    }
+
+    // &:last-child {
+    //     h1 {
+    //         &::before {
+    //             width: 165px;
+    //         }
+
+    //         &::after {
+    //             width: 165px;
+    //         }
+    //     }
+    // }
+
     h1 {
         position: relative;
         text-align: center;
@@ -288,7 +415,7 @@
         &::before {
             position: absolute;
             content: "";
-            width: 90px;
+            width: calc(50% - 150px);
             height: 1px;
             background-color: #dbdbdb;
             top: 50%;
@@ -299,26 +426,29 @@
         &::after {
             position: absolute;
             content: "";
-            width: 90px;
+            width: calc(50% - 150px);
             height: 1px;
             background-color: #dbdbdb;
             top: 50%;
             right: 0;
             transform: translateY(-50%);
         }
-        &.fs32{
+
+        &.fs32 {
             font-size: clamp(20px, 1.8vw, 30px);
             text-align: start;
             margin-bottom: 15px;
-            &::before{
+
+            &::before {
                 display: none;
             }
-            &::after{
+
+            &::after {
                 display: none;
             }
         }
     }
-    
+
 
     .ingredientsWrap {
         margin-top: 25px;
@@ -335,7 +465,8 @@
             }
         }
     }
-    .testimonialsInner{
+
+    .testimonialsInner {
         margin-top: clamp(20px, 2.8vw, 40px);
     }
 }
