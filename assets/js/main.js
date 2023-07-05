@@ -12,19 +12,19 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     // Get the switch element
-    const switchElement = $('.switch #checkProd');
+    let switchElement = $('.switch #checkProd');
 
     // Get the toogleRadio element
-    const toogleRadio = $('.toogleRadio');
+    let toogleRadio = $('.toogleRadio');
 
     // Get the price elements
-    const modifyPrice1 = $('#modifyPrice1');
-    const modifyPrice2 = $('#modifyPrice2');
-    const modifyPrice3 = $('#modifyPrice3');
-    const modifyShipping = $('.modifyShipping');
-    const savePrice1 = $('#savePrice1');
-    const savePrice2 = $('#savePrice2');
-    const savePrice3 = $('#savePrice3');
+    let modifyPrice1 = $('#modifyPrice1');
+    let modifyPrice2 = $('#modifyPrice2');
+    let modifyPrice3 = $('#modifyPrice3');
+    let modifyShipping = $('.modifyShipping');
+    let savePrice1 = $('.savePrice1');
+    let savePrice2 = $('.savePrice2');
+    let savePrice3 = $('.savePrice3');
 
     // Add click event listener to the switch element
     switchElement.on('click', function () {
@@ -97,9 +97,9 @@ $(document).ready(function () {
     let modifyPrice2 = $('#modifyPrice2');
     let modifyPrice3 = $('#modifyPrice3');
     let modifyShipping = $('.modifyShipping');
-    let savePrice1 = $('#savePrice1');
-    let savePrice2 = $('#savePrice2');
-    let savePrice3 = $('#savePrice3');
+    let savePrice1 = $('.savePrice1');
+    let savePrice2 = $('.savePrice2');
+    let savePrice3 = $('.savePrice3');
 
     $(".purchaseBtn").click(function () {
         var purchaseLi = $(this).parent();
