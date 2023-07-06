@@ -520,13 +520,13 @@
     }
 
     .newPrice {
-        display: flex;
+        display: inline-flex;
         align-items: end;
+        position: relative;
 
         h1 {
             font-weight: 900;
             font-size: 50px;
-            position: relative;
         }
 
         span {
@@ -539,9 +539,10 @@
         sup {
             font-size: 16px;
     font-weight: 700;
-    top: 39%;
+    top: 35%;
     position: absolute;
     transform: translateY(-50%);
+    right: 10px;
         }
     }
 

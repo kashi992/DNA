@@ -750,13 +750,13 @@ p {
   transform: rotate(-8deg) translateY(-50%);
 }
 .pricingBox .newPrice {
-  display: flex;
+  display: inline-flex;
   align-items: end;
+  position: relative;
 }
 .pricingBox .newPrice h1 {
   font-weight: 900;
   font-size: 50px;
-  position: relative;
 }
 .pricingBox .newPrice span {
   font-size: 12px !important;
@@ -767,9 +767,10 @@ p {
 .pricingBox .newPrice sup {
   font-size: 16px;
   font-weight: 700;
-  top: 39%;
+  top: 35%;
   position: absolute;
   transform: translateY(-50%);
+  right: 10px;
 }
 .pricingBox .youSave {
   margin-top: 11px;
@@ -2612,6 +2613,7 @@ p {
   .securePayment {
     height: 40px;
     max-width: 165px;
+    display: none;
   }
   .orderSummaryAccordin .accordion-button {
     padding-right: 0;
