@@ -102,6 +102,14 @@
         display: flex;
         gap: 12px;
         font-weight: 700;
+        img{
+            width: 22px;
+            height: 22px;
+        }
+        h2{
+            color: inherit;
+            font-weight: inherit;
+        }
     }
 
     li {
@@ -364,7 +372,7 @@
 .pricingWrap {
     display: flex;
     justify-content: space-between;
-    margin-top: 250px;
+    margin-top: 150px;
     flex-wrap: wrap;
     align-items: center;
 }
@@ -513,24 +521,27 @@
 
     .newPrice {
         display: flex;
-        align-items: center;
-        position: relative;
+        align-items: end;
 
         h1 {
             font-weight: 900;
             font-size: 50px;
+            position: relative;
         }
 
         span {
-            font-size: 12px;
-            position: absolute;
-            right: -3px;
+            font-size: 12px !important;
+            position: relative;
+            right: 0;
             bottom: 8px;
         }
 
         sup {
             font-size: 16px;
-            font-weight: 700;
+    font-weight: 700;
+    top: 39%;
+    position: absolute;
+    transform: translateY(-50%);
         }
     }
 
@@ -585,6 +596,9 @@
             font-size: 24px;
             font-weight: 700;
         }
+        &:hover{
+            text-decoration: underline;
+        }
     }
 
     .freeShipping {
@@ -621,7 +635,7 @@
 // clientName sec start 
 .clientName {
     text-align: center;
-    margin-top: 170px;
+    margin-top: 100px;
     &.clientNameClass {
         position: sticky;
      top: 0;
@@ -1125,7 +1139,7 @@
     padding: 15px 0px;
     position: relative;
 
-    &.destop-visible {
+    &.desktop-visible {
         position: sticky !important;
         bottom: 0;
         z-index: 99;

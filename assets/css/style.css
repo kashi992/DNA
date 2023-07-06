@@ -405,6 +405,14 @@ p {
   gap: 12px;
   font-weight: 700;
 }
+.benefitsList .benefitTitle img {
+  width: 22px;
+  height: 22px;
+}
+.benefitsList .benefitTitle h2 {
+  color: inherit;
+  font-weight: inherit;
+}
 .benefitsList li {
   font-weight: 700;
 }
@@ -615,7 +623,7 @@ p {
 .pricingWrap {
   display: flex;
   justify-content: space-between;
-  margin-top: 250px;
+  margin-top: 150px;
   flex-wrap: wrap;
   align-items: center;
 }
@@ -743,22 +751,25 @@ p {
 }
 .pricingBox .newPrice {
   display: flex;
-  align-items: center;
-  position: relative;
+  align-items: end;
 }
 .pricingBox .newPrice h1 {
   font-weight: 900;
   font-size: 50px;
+  position: relative;
 }
 .pricingBox .newPrice span {
-  font-size: 12px;
-  position: absolute;
-  right: -3px;
+  font-size: 12px !important;
+  position: relative;
+  right: 0;
   bottom: 8px;
 }
 .pricingBox .newPrice sup {
   font-size: 16px;
   font-weight: 700;
+  top: 39%;
+  position: absolute;
+  transform: translateY(-50%);
 }
 .pricingBox .youSave {
   margin-top: 11px;
@@ -806,6 +817,9 @@ p {
   font-size: 24px;
   font-weight: 700;
 }
+.pricingBox .addCart:hover {
+  text-decoration: underline;
+}
 .pricingBox .freeShipping {
   gap: 10px;
 }
@@ -835,7 +849,7 @@ p {
 
 .clientName {
   text-align: center;
-  margin-top: 170px;
+  margin-top: 100px;
 }
 .clientName.clientNameClass {
   position: sticky;
@@ -1245,7 +1259,7 @@ p {
   padding: 15px 0px;
   position: relative;
 }
-.hurryOrder.destop-visible {
+.hurryOrder.desktop-visible {
   position: sticky !important;
   bottom: 0;
   z-index: 99;
@@ -1473,14 +1487,13 @@ p {
   padding: 15px 16px;
   display: flex;
   justify-content: center;
+  gap: 10px;
 }
 .checkBox input[type=checkbox] {
-  margin-right: 9px;
-  width: 20%;
-  height: 31px;
+  min-width: 33px;
+  height: 35px;
   border-radius: 2px;
   border: 1px solid #dbdbdb;
-  margin-right: 7px;
 }
 .checkBox p a {
   color: inherit;
@@ -1592,6 +1605,7 @@ p {
   border-radius: 4px;
   max-width: 190px;
   width: 100%;
+  pointer-events: none;
 }
 .securePayment svg {
   fill: rgb(127, 127, 127);
@@ -1683,15 +1697,15 @@ p {
   object-fit: cover;
   height: 100%;
 }
-.quantityWrap li .bottlesImg::before {
+.quantityWrap li .bottlesImg .bottlesTag {
   position: absolute;
-  content: "1";
   width: 28px;
   height: 28px;
   background-color: #635c5c;
   border-radius: 50px;
-  top: -9px;
-  right: -12px;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
   color: #ffffff;
   font-size: 16px;
   line-height: 1.3;
@@ -1719,6 +1733,8 @@ p {
   margin-top: 30px;
   padding: 10px;
   color: rgb(127, 127, 127);
+  margin-left: auto;
+  margin-right: auto;
 }
 .GuarantyWrap h1 {
   text-align: center;
@@ -1906,10 +1922,6 @@ p {
   .checkBox {
     padding: 10px;
   }
-  .checkBox input[type=checkbox] {
-    width: 15%;
-    height: 25px;
-  }
   .checkoutBtn {
     height: 60px;
   }
@@ -1967,7 +1979,7 @@ p {
     padding: 5px 10px;
   }
   .productSlider .largeView {
-    height: auto;
+    height: 400px;
   }
   .pricingBox {
     width: 100%;
@@ -2061,9 +2073,6 @@ p {
     top: 0;
     transform: translateY(-50%);
   }
-  .pricingBox .newPrice span {
-    right: 8px;
-  }
   .pricingTable h2 {
     font-size: 22px;
   }
@@ -2084,11 +2093,14 @@ p {
   }
 }
 @media (max-width: 991.98px) {
+  h2.productDescription {
+    line-height: 1.5;
+  }
   .pricingBox {
     margin-right: auto;
   }
   .productSlider .largeView {
-    height: 80vh;
+    height: 690px;
     object-fit: contain;
   }
   .productSlider .smallView {
@@ -2116,6 +2128,8 @@ p {
   }
   .complexRight .productTitle {
     justify-content: center;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
   }
   .product-info_md .accordion-button {
     border-radius: 0px !important;
@@ -2197,6 +2211,15 @@ p {
     padding: 8px 25px;
     border-bottom: 1px solid #dbdbdb;
   }
+  .orderSummaryAccordin .accordion-button .hideOrderSummary {
+    display: none;
+  }
+  .orderSummaryAccordin .accordion-button.collapsed .hideOrderSummary {
+    display: block;
+  }
+  .orderSummaryAccordin .accordion-button.collapsed .showOrderSummary {
+    display: none;
+  }
   .orderSummaryAccordin .accordion-button::after {
     left: 0;
     position: absolute;
@@ -2270,7 +2293,7 @@ p {
     gap: 15px;
   }
   .productSlider .largeView {
-    object-fit: cover;
+    height: 600px;
   }
   .productSlider .smallView {
     height: 135px;
@@ -2358,25 +2381,14 @@ p {
   .productTitle {
     display: flex;
     align-items: center;
-    gap: 5px;
+    justify-content: center;
+    gap: 15px;
     margin-top: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 2px solid #dbdbdb;
-    width: calc(100% + 16px);
-    position: relative;
-    left: -8px;
+    width: 100%;
     flex-wrap: wrap;
-  }
-  .productTitle h2 {
-    font-size: 13px;
-  }
-  .productTitle img {
-    width: 80px;
-    margin-left: auto;
-  }
-  .productTitle i {
-    font-size: 13px;
   }
   .text-gray {
     color: #6d6e71 !important;
@@ -2404,10 +2416,6 @@ p {
   }
   .pricingBox .newPrice sup {
     font-size: 14px;
-  }
-  .pricingBox .discountPrice li span {
-    font-size: 12px;
-    right: 20px;
   }
   .pricingBox .discountPrice li .oldPrice {
     font-size: 14px;
@@ -2616,6 +2624,7 @@ p {
   }
   h2.productDescription {
     line-height: 1.6;
+    padding: 0 15px;
   }
   .accordion-flush .accordion-body {
     padding-left: 0;
@@ -2625,8 +2634,24 @@ p {
     gap: 15px;
     line-height: 1.3;
   }
+  .productSteps .skin-type .skin-type-part {
+    justify-content: center;
+  }
+  .checkBox input[type=checkbox] {
+    min-width: 30px;
+    height: 32px;
+  }
+}
+@media (max-width: 485.98px) {
+  .productSlider .largeView {
+    height: auto;
+    object-fit: cover;
+  }
 }
 @media (max-width: 385.98px) {
+  h2.productDescription {
+    padding: 0 5px;
+  }
   .pricingBox .discountPrice li img {
     height: 120px;
     width: 120px;
@@ -2637,6 +2662,7 @@ p {
   }
   .productSlider .largeView {
     height: auto;
+    object-fit: cover;
   }
 }
 @media (max-width: 300px) {

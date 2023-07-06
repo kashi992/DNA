@@ -154,11 +154,6 @@
         padding: 10px;
     }
 
-    .checkBox input[type="checkbox"] {
-        width: 15%;
-        height: 25px;
-    }
-
     .checkoutBtn {
         height: 60px;
     }
@@ -205,8 +200,6 @@
         min-height: 80px;
     }
 
-
-
 }
 
 // Ipad pro 
@@ -237,7 +230,7 @@
     }
 
     .productSlider .largeView {
-        height: auto;
+        height: 400px;
     }
 
     .pricingBox {
@@ -353,10 +346,6 @@
         transform: translateY(-50%);
     }
 
-    .pricingBox .newPrice span {
-        right: 8px;
-    }
-
     .pricingTable h2 {
         font-size: 22px;
     }
@@ -383,12 +372,15 @@
 
 // `lg` applies to medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
+    h2.productDescription{
+        line-height: 1.5;
+    }
     .pricingBox {
         margin-right: auto;
     }
 
     .productSlider .largeView {
-        height: 80vh;
+        height: 690px;
         object-fit: contain;
     }
     .productSlider .smallView {
@@ -423,6 +415,8 @@
 
     .complexRight .productTitle {
         justify-content: center;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
     }
 
     .product-info_md {
@@ -528,6 +522,17 @@
         .accordion-button {
             padding: 8px 25px;
             border-bottom: 1px solid #dbdbdb;
+            .hideOrderSummary{
+                display: none;
+            }
+            &.collapsed{
+                .hideOrderSummary{
+                    display: block;
+                }
+                .showOrderSummary{
+                    display: none;
+                }
+            }
 
             &::after {
                 left: 0;
@@ -624,7 +629,7 @@
     }
 
     .productSlider .largeView {
-        object-fit: cover;
+        height: 600px;
     }
     .productSlider .smallView {
         height: 135px;
@@ -731,28 +736,14 @@
     .productTitle {
         display: flex;
         align-items: center;
-        gap: 5px;
+        justify-content: center;
+        gap: 15px;
         margin-top: 10px;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
         padding-bottom: 10px;
         border-bottom: 2px solid #dbdbdb;
-        width: calc(100% + 16px);
-        position: relative;
-        left: -8px;
+        width: 100%;
         flex-wrap: wrap;
-
-        h2 {
-            font-size: 13px;
-        }
-
-        img {
-            width: 80px;
-            margin-left: auto;
-        }
-
-        i {
-            font-size: 13px;
-        }
     }
 
     .text-gray {
@@ -788,11 +779,6 @@
 
     .pricingBox .newPrice sup {
         font-size: 14px;
-    }
-
-    .pricingBox .discountPrice li span {
-        font-size: 12px;
-        right: 20px;
     }
 
     .pricingBox .discountPrice li .oldPrice {
@@ -1046,6 +1032,7 @@
     }
     h2.productDescription {
         line-height: 1.6;
+        padding: 0 15px;
     }
     .accordion-flush .accordion-body{
         padding-left: 0;
@@ -1055,10 +1042,26 @@
         gap: 15px;
         line-height: 1.3;
     }
+    .productSteps .skin-type .skin-type-part {
+      justify-content: center;
+    }
+    .checkBox input[type=checkbox] {
+        min-width: 30px;
+        height: 32px;
+    }
 }
 
+@media (max-width: 485.98px) {
+    .productSlider .largeView {
+        height: auto;
+        object-fit: cover;
+    }
+}
 // `xsm` applies to x-small devices (portrait phones, less than 576px)
 @media (max-width: 385.98px) {
+    h2.productDescription {
+        padding: 0 5px;
+    }
     .pricingBox .discountPrice li img {
         height: 120px;
         width: 120px;
@@ -1071,6 +1074,7 @@
 
     .productSlider .largeView {
         height: auto;
+        object-fit: cover;
     }
 }
 

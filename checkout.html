@@ -58,7 +58,8 @@
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button justify-content-between" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <p>Show Order Summary</p>
+                                        <p class="showOrderSummary">Show Order Summary</p>
+                                        <p class="hideOrderSummary">Hide Order Summary</p>
                                         <p class="fw600">$139.00</p>
                                     </button>
                                 </h2>
@@ -69,6 +70,7 @@
                                             <li>
                                                 <div>
                                                     <div class="bottlesImg">
+                                                        <span class="bottlesTag">1</span>
                                                         <img src="./assets/img/bottle1.png" alt="" />
                                                     </div>
                                                     <div>
@@ -119,31 +121,36 @@
                         <form action="" class="formInner">
                             <div class="form_group labelHide w50">
                                 <label for="">First Name</label>
-                                <input type="text" class="form-control" placeholder="First Name *" />
+                                <input type="text" class="form-control" placeholder="First name" />
                             </div>
                             <div class="form_group labelHide w50">
                                 <label for="">Last Name</label>
-                                <input type="text" class="form-control" placeholder="Last Name *" />
+                                <input type="text" class="form-control" placeholder="Last name" />
                             </div>
                             <div class="form_group labelHide w50">
                                 <label for="">Email</label>
-                                <input type="email" class="form-control" placeholder="Email *" />
+                                <input type="email" class="form-control" placeholder="Email" />
                             </div>
                             <div class="form_group labelHide w50">
                                 <label for="">Phone</label>
-                                <input type="number" class="form-control" placeholder="Phone *" />
+                                <input type="number" class="form-control" placeholder="Phone" />
                             </div>
                             <div class="form_group labelHide w-100">
                                 <label for="">Address</label>
-                                <input type="text" class="form-control" placeholder="Shipping Address *" />
+                                <input type="text" class="form-control" placeholder="Address" />
                             </div>
                             <div class="form_group labelHide w-100">
-                                <label for="">Apt./Unit</label>
-                                <input type="text" class="form-control" placeholder="Apt. / Unit #" />
+                                <label for="">Apartment, suite, etc. (optional)</label>
+                                <input type="text" class="form-control" placeholder="Apartment, suite, etc. (optional)
+                                " />
+                            </div>
+                            <div class="form_group labelHide w50">
+                                <label for="">Zip Code</label>
+                                <input type="text" class="form-control" placeholder="Zip code" />
                             </div>
                             <div class="form_group labelHide w50">
                                 <label for="">City</label>
-                                <input type="text" class="form-control" placeholder="City *" />
+                                <input type="text" class="form-control" placeholder="City" />
                             </div>
                             <div class="form_group labelHide w50">
                                 <label for="">State</label>
@@ -203,10 +210,7 @@
                                     <option value="WY">Wyoming</option>
                                 </select>
                             </div>
-                            <div class="form_group labelHide w50">
-                                <label for="">Zip</label>
-                                <input type="text" class="form-control" placeholder="Zip *" />
-                            </div>
+                           
                             <div class="form_group labelHide w50">
                                 <label for="">country</label>
                                 <select id="country" class="form-select" name="country" required autocomplete="off">
@@ -217,15 +221,8 @@
                         <div class="checkBox">
                             <input type="checkbox" />
                             <p>
-                                <b>Get 10% off your next order + insider deals when you sign
-                                    up for texts</b>
-                                By checking this box, you agree to receive recurring automated
-                                promotional and personalized marketing text messages (e.g.
-                                cart reminders) from Dr. Kellyann at the cell number used when
-                                signing up. Consent is not a condition of any purchase. Reply
-                                HELP for help and STOP to cancel. Msg frequency varies. Msg &
-                                data rates may apply. View <a href="">Terms</a> &
-                                <a href="">Privacy</a>
+                                <b class="mb-1 d-block">Want to get it even FASTER?</b>
+                                Add on Priority Shipping to ensure speedy processing and handling of this order for the low cost of $14.95
                             </p>
                         </div>
                         <div class="paymentInfo">
@@ -350,6 +347,7 @@
                             <li>
                                 <div>
                                     <div class="bottlesImg">
+                                        <span class="bottlesTag">1</span>
                                         <img src="./assets/img/bottle1.png" alt="" />
                                     </div>
                                     <div>
