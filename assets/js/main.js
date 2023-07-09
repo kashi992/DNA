@@ -56,18 +56,18 @@ $(document).ready(function () {
 
 
 jQuery(document).ready(function () {
-    var d = $(".promiseWrapBtm").first()
-    var offsets = d.position();
-    var positions = offsets.top;
-    jQuery(window).scroll(function () {
-        var scroll = jQuery(window).scrollTop();
-        if (scroll >= positions) {
-            jQuery(".hurryOrder").addClass("desktop-visible");
-        } else {
-            jQuery(".hurryOrder").removeClass("desktop-visible");
-        }
-        $(".hurryOrder").parent().css("overflow", "visible");
-    });
+  var d = $(".promiseWrapBtm").first()
+  var offsets = d.position();
+  var positions = offsets.top;
+  jQuery(window).scroll(function () {
+    var scroll = jQuery(window).scrollTop();
+    if (scroll >= positions) {
+      jQuery(".hurryOrder").addClass("desktop-visible");
+    } else {
+      jQuery(".hurryOrder").removeClass("desktop-visible");
+    }
+    $(".hurryOrder").parent().css("overflow", "visible");
+  });
 });
 
 // jQuery(document).ready(function () {
@@ -214,25 +214,25 @@ $(document).ready(function () {
 
 // check out page start 
 
-var spd = 100;
-var spdVal = 10;
-var cntDown = 5 * 60 * spdVal;
-setInterval(function () {
-  var mn, sc, ms;
-  cntDown--;
-  if (cntDown < 0) {
-    return false;
-  }
-  mn = Math.floor((cntDown / spdVal) / 60);
-  mn = (mn < 10 ? '0' + mn : mn);
-  sc = Math.floor((cntDown / spdVal) % 60);
-  sc = (sc < 10 ? '0' + sc : sc);
-  ms = Math.floor(cntDown % spdVal);
-  ms = (ms < 10 ? '0' + ms : ms);
-  var result = mn + ':' + sc;
-  document.getElementById('desk-stopwatch').innerHTML = result;
-  document.getElementById('mob-stopwatch').innerHTML = result;
-}, spd);
+// var spd = 100;
+// var spdVal = 10;
+// var cntDown = 5 * 60 * spdVal;
+// setInterval(function () {
+//   var mn, sc, ms;
+//   cntDown--;
+//   if (cntDown < 0) {
+//     return false;
+//   }
+//   mn = Math.floor((cntDown / spdVal) / 60);
+//   mn = (mn < 10 ? '0' + mn : mn);
+//   sc = Math.floor((cntDown / spdVal) % 60);
+//   sc = (sc < 10 ? '0' + sc : sc);
+//   ms = Math.floor(cntDown % spdVal);
+//   ms = (ms < 10 ? '0' + ms : ms);
+//   var result = mn + ':' + sc;
+//   document.getElementById('desk-stopwatch').innerHTML = result;
+//   document.getElementById('mob-stopwatch').innerHTML = result;
+// }, spd);
 
 
 $(document).ready(function () {
@@ -253,3 +253,86 @@ $(document).ready(function () {
   });
 });
 
+
+
+// Quiz page start 
+$(document).ready(function () {
+  // Set up the click event for cards
+  $(".quizItems li").click(function () {
+    $(".quizItems li").removeClass("activeCard");
+    $(this).addClass("activeCard");
+    updateNextButtonVisibility();
+  });
+
+  // Set up the click event for the "Next" button
+  $(".next").click(function () {
+    var currentFieldset = $(this).closest("fieldset");
+    var nextFieldset = currentFieldset.next();
+    var currentProgress = $("#progressbar li.active");
+    var nextProgress = currentProgress.next();
+
+    currentFieldset.hide();
+    nextFieldset.show();
+
+    currentProgress.addClass("completeStep");
+    nextProgress.addClass("active");
+
+    updateNextButtonVisibility();
+
+    if (nextFieldset.length === 0) {
+      setTimeout(function () {
+        $("#stepsForm").hide();
+        $(".loader_wrapper").show();
+        setTimeout(function () {
+          window.location.href = "index.html";
+        }, 3000); // Redirect after 3 seconds
+      }, 400); // Show the last fieldset for 3 seconds
+    }
+  });
+
+  // Set up the click event for the "Previous" button
+  $(".previous").click(function () {
+    var currentFieldset = $(this).closest("fieldset");
+    var prevFieldset = currentFieldset.prev();
+    var currentProgress = $("#progressbar li.active");
+    var prevProgress = currentProgress.prev();
+
+    currentFieldset.hide();
+    prevFieldset.show();
+
+    currentProgress.removeClass("active");
+    prevProgress.removeClass("completeStep").addClass("active");
+    prevProgress.nextAll().removeClass("completeStep");
+    prevProgress.prevAll().addClass("completeStep");
+
+    updateNextButtonVisibility();
+  });
+
+  function updateNextButtonVisibility() {
+    var activeCard = $(".quizItems li.activeCard");
+    var nextButton = activeCard.closest("fieldset").find(".next");
+
+    if (activeCard.length > 0) {
+      // nextButton.show();
+      nextButton.addClass("nextBtnFull");
+    } else {
+      // nextButton.hide();
+      nextButton.removeClass("nextBtnFull");
+    }
+  }
+
+  // Initial update of the Next button visibility
+  updateNextButtonVisibility();
+});
+
+
+
+$(document).ready(function() {
+  let BtmIconImg = $('.btmIconImg');
+
+  // Add click event listener
+  BtmIconImg.on('click', function() {
+    // Remove active class from the parent '.btmIcon' element
+    $(this).closest('.btmIcon').toggleClass('btmIconActive');
+  });
+});
