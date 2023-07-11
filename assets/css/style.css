@@ -1805,8 +1805,16 @@ p {
   margin-top: clamp(20px, 2.8vw, 40px);
 }
 
+.quizNavbar .navInner {
+  padding: 5px 0;
+}
+.quizNavbar .mainLogo {
+  max-width: 150px;
+  width: 100%;
+}
+
 .steps_wrapper {
-  height: calc(100vh - 152px);
+  height: calc(100vh - 106px);
 }
 .steps_wrapper .container {
   height: 100%;
@@ -1822,11 +1830,11 @@ p {
   position: relative;
   border: 0;
   margin: 30px 0;
-  max-width: 1050px;
+  max-width: 500px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  height: calc(100% - 145px);
+  height: calc(100% - 140px);
 }
 #stepsForm fieldset:last-of-type input.next.action-button {
   opacity: 1 !important;
@@ -1850,7 +1858,7 @@ p {
 #progressbar {
   overflow: hidden;
   counter-reset: step;
-  max-width: 640px;
+  max-width: 600px;
   margin: 10px auto;
   display: flex;
   align-items: center;
@@ -1944,6 +1952,7 @@ p {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 10px;
 }
 
 #stepsForm .action-button {
@@ -1993,7 +2002,7 @@ p {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 4px 10px 4px 40px;
+  padding: 10px 10px 10px 40px;
   max-width: 100%;
   min-width: 75px;
   color: #13a89e;
@@ -2009,32 +2018,45 @@ p {
 }
 .quizWrap li:hover {
   padding-left: 70px;
-  background-color: rgba(19, 168, 158, 0.3);
+  background-color: #13a89e;
   box-shadow: rgba(19, 168, 158, 0.6) 0px 0px 0px 2px inset;
 }
 .quizWrap li:hover .list-key {
   width: auto;
   right: calc(100% - 62px);
+  background-color: #13a89e;
+  color: #fff;
+  border-color: #fff;
 }
 .quizWrap li:hover .list-key span {
   display: inline-flex;
 }
+.quizWrap li:hover p {
+  color: #fff;
+}
 .quizWrap li.activeCard {
   padding-left: 70px;
-  background-color: rgba(19, 168, 158, 0.3);
+  background-color: #13a89e;
   box-shadow: rgba(19, 168, 158, 0.6) 0px 0px 0px 2px inset;
 }
 .quizWrap li.activeCard .list-key {
-  background-color: #13a89e;
-  color: #fff;
   width: auto;
   right: calc(100% - 62px);
+  background-color: #13a89e;
+  color: #fff;
+  border-color: #fff;
 }
 .quizWrap li.activeCard .list-key span {
   display: inline-flex;
 }
 .quizWrap li.activeCard .list-icon {
   opacity: 1;
+}
+.quizWrap li.activeCard .list-icon path {
+  fill: #fff;
+}
+.quizWrap li.activeCard p {
+  color: #fff;
 }
 .quizWrap .list-key {
   border: 1px solid rgba(19, 168, 158, 0.6);
@@ -2065,6 +2087,25 @@ p {
 .loader_wrapper {
   display: none;
   height: calc(100vh - 152px);
+}
+.loader_wrapper.loader__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.loader_wrapper #myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+.loader_wrapper #myBar {
+  width: 10%;
+  height: 30px;
+  background-color: #13a89e;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .loader_inner {
@@ -2111,9 +2152,9 @@ p {
 }
 .btmIcon {
   position: fixed;
-  bottom: 0;
-  left: 75%;
-  transform: translateX(-50%);
+  bottom: -15px;
+  right: 0;
+  transform: translateX(-75%);
   z-index: 1000000000000000000000000;
   max-width: 300px;
   width: 100%;
@@ -2157,6 +2198,7 @@ p {
   width: 45px;
   height: 45px;
   object-fit: contain;
+  cursor: pointer;
 }
 .btmIcon .sharpBorder {
   content: "";
@@ -2210,6 +2252,35 @@ p {
   line-height: 1.29;
   letter-spacing: -0.09px;
   font-weight: 500;
+}
+.btmIcon .iconText .cross {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  top: 5px;
+  right: 5px;
+  z-index: 999;
+  cursor: pointer;
+}
+.btmIcon .iconText .cross::before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 1px;
+  top: 0px;
+  right: 8px;
+  background-color: #999;
+  transform: rotate(45deg);
+}
+.btmIcon .iconText .cross::after {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 1px;
+  top: 0px;
+  right: 8px;
+  background-color: #999;
+  transform: rotate(-45deg);
 }
 
 @media (max-width: 1399.98px) {
@@ -2513,8 +2584,21 @@ p {
     height: calc(100vh - 100px);
   }
   .btmIcon {
-    left: 50%;
     transform: unset;
+  }
+  .btmIcon .notifyBadgeWrap {
+    margin-left: auto;
+    right: 30px;
+  }
+  .btmIcon .sharpBorder {
+    left: -30px;
+    margin-left: auto;
+  }
+  .btmIcon .iconText {
+    right: -30px;
+  }
+  .btmIcon .btmIconInner {
+    margin-bottom: 8px;
   }
 }
 @media (max-width: 991.98px) {
@@ -2710,9 +2794,6 @@ p {
   }
   #stepsForm fieldset {
     max-width: 630px;
-  }
-  #progressbar {
-    max-width: 500px;
   }
 }
 @media (max-width: 575.98px) {
@@ -3076,6 +3157,7 @@ p {
   #stepsForm fieldset {
     margin-top: 20px;
     margin-bottom: 20px;
+    height: 100%;
   }
   #stepsForm fieldset h2 span {
     position: unset;
@@ -3086,34 +3168,43 @@ p {
     gap: 15px;
   }
   .btmIcon {
-    position: unset;
-    margin-top: 30px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+    bottom: 0px;
+    right: 0;
+    position: absolute;
+    z-index: 9999;
+    max-width: 200px;
+  }
+  #stepsForm input.previous.action-button {
+    background-image: url(../img/leftARR.svg) !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 0;
+    width: 25px;
+    font-size: 0;
+    height: 25px;
+    padding: 0;
+    position: absolute;
+    left: 0;
+  }
+  .stepsButtons {
+    justify-content: center;
+    position: relative;
+    margin-top: auto;
   }
   .btmIcon .iconText {
+    right: 0px;
     width: 200px;
-    padding: 10px;
-    margin: auto;
-    left: 0;
+    margin-left: auto;
   }
   .btmIcon .sharpBorder {
-    margin: auto;
-    left: 0;
-  }
-  .btmIcon .btmIconInner {
-    margin-bottom: 5px;
+    left: -3px;
   }
   .btmIcon .notifyBadgeWrap {
-    width: 100%;
-    text-align: center;
-    margin-left: -10px;
+    right: 0;
   }
-  .btmIcon .notifyBadge {
-    right: 40%;
-    transform: translate(-50%, -50%);
+  #stepsForm input.next.action-button.nextBtnFull {
+    position: relative;
+    z-index: 999999;
   }
 }
 @media (max-width: 485.98px) {

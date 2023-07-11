@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <div class="quizNavbar">
     <!-- navbar start  -->
     <header class="navWrap">
         <div class="container">
@@ -28,6 +29,7 @@
         </div>
     </header>
     <!-- navbar end -->
+    </div>
     <!-- steps indicator start  -->
     <div class="steps_wrapper">
         <div class="container">
@@ -139,6 +141,7 @@
                                     <span> DNA Complex: </span>
                                     <p>Hi there :) <br>
                                         This should take less than 3 minutes.</p>
+                                        <div class="cross"></div>
                                 </div>
                                 <div class="sharpBorder"></div>
                             </div>
@@ -342,9 +345,13 @@
             </div>
             <!-- loader section start -->
             <section class="loader_wrapper">
-                <div class="loader_inner">
+                <!-- <div class="loader_inner">
                     <div class="loaderMain"></div>
-                </div>
+                </div> -->
+                <h1 class="fs32 mb15 text-center">Calculating your match</h1>
+                <div id="myProgress">
+                    <div id="myBar">10%</div>
+                  </div>
             </section>
             <!-- loader section start -->
         </div>

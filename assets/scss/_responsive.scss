@@ -387,8 +387,21 @@
         height: calc(100vh - 100px);
     }
     .btmIcon {
-        left: 50%;
    transform: unset;
+    }
+    .btmIcon .notifyBadgeWrap {
+        margin-left: auto;
+        right: 30px;
+    }
+    .btmIcon .sharpBorder {
+        left: -30px;
+        margin-left: auto;
+    }
+    .btmIcon .iconText {
+        right: -30px;
+    }
+    .btmIcon .btmIconInner {
+        margin-bottom: 8px;
     }
 }
 
@@ -652,9 +665,6 @@
         max-width: 630px;
     }
 
-    #progressbar {
-        max-width: 500px;
-    }
 }
 
 //  mobile 
@@ -1116,6 +1126,7 @@
     //   Quiz page start 
     #stepsForm fieldset {
       margin-top: 20px;margin-bottom: 20px;
+      height: 100%;
     }
     #stepsForm fieldset h2 span {
         position: unset;
@@ -1126,34 +1137,43 @@
       gap: 15px;
     }
     .btmIcon {
-        position: unset;
-        margin-top: 30px;
-        height: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
+        bottom: 0px;
+        right: 0;
+        position: absolute;
+        z-index: 9999;
+        max-width: 200px;
+    }
+    #stepsForm input.previous.action-button {
+        background-image: url(../img/leftARR.svg) !important;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border: 0;
+        width: 25px;
+        font-size: 0;
+        height: 25px;
+        padding: 0;
+    position: absolute;
+    left: 0;
+    }
+    .stepsButtons {
+        justify-content: center;
+        position: relative;
+        margin-top: auto;
     }
     .btmIcon .iconText {
+        right: 0px;
         width: 200px;
-        padding: 10px;
-        margin: auto;
-        left: 0;
+        margin-left: auto;
     }
     .btmIcon .sharpBorder {
-        margin: auto;
-        left: 0;
-    }
-    .btmIcon .btmIconInner {
-        margin-bottom: 5px;
+        left: -3px;
     }
     .btmIcon .notifyBadgeWrap {
-        width: 100%;
-        text-align: center;
-        margin-left: -10px;
+        right: 0;
     }
-    .btmIcon .notifyBadge {
-        right: 40%;
-        transform: translate(-50%, -50%);
+    #stepsForm input.next.action-button.nextBtnFull {
+        position: relative;
+        z-index: 999999;
     }
 }
 

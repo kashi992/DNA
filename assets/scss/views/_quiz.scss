@@ -1,5 +1,16 @@
+.quizNavbar {
+    .navInner {
+        padding: 5px 0;
+    }
+
+    .mainLogo {
+        max-width: 150px;
+        width: 100%;
+    }
+}
+
 .steps_wrapper {
-    height: calc(100vh - 152px);
+    height: calc(100vh - 106px);
 
     .container {
         height: 100%;
@@ -17,11 +28,11 @@
     position: relative;
     border: 0;
     margin: 30px 0;
-    max-width: 1050px;
+    max-width: 500px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    height: calc(100% - 145px);
+    height: calc(100% - 140px);
 
     &:last-of-type {
         input.next.action-button {
@@ -53,7 +64,7 @@
 #progressbar {
     overflow: hidden;
     counter-reset: step;
-    max-width: 640px;
+    max-width: 600px;
     margin: 10px auto;
     display: flex;
     align-items: center;
@@ -169,6 +180,7 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 10px;
 }
 
 #stepsForm .action-button {
@@ -220,7 +232,7 @@
         display: flex;
         align-items: center;
         width: 100%;
-        padding: 4px 10px 4px 40px;
+        padding: 10px 10px 10px 40px;
         max-width: 100%;
         min-width: 75px;
         color: #13a89e;
@@ -236,29 +248,37 @@
 
         &:hover {
             padding-left: 70px;
-            background-color: rgba(19, 168, 158, 0.3);
+            background-color: #13a89e;
             box-shadow: rgba(19, 168, 158, 0.6) 0px 0px 0px 2px inset;
 
             .list-key {
                 width: auto;
                 right: calc(100% - 62px);
+                background-color: #13a89e;
+                color: #fff;
+                border-color: #fff;
 
                 span {
                     display: inline-flex;
                 }
             }
+
+            p {
+                color: #fff;
+            }
         }
 
         &.activeCard {
             padding-left: 70px;
-            background-color: rgba(19, 168, 158, 0.3);
+            background-color: #13a89e;
             box-shadow: rgba(19, 168, 158, 0.6) 0px 0px 0px 2px inset;
 
             .list-key {
-                background-color: #13a89e;
-                color: #fff;
                 width: auto;
                 right: calc(100% - 62px);
+                background-color: #13a89e;
+                color: #fff;
+                border-color: #fff;
 
                 span {
                     display: inline-flex;
@@ -267,6 +287,13 @@
 
             .list-icon {
                 opacity: 1;
+                path{
+                    fill: #fff;
+                }
+            }
+
+            p {
+                color: #fff;
             }
         }
     }
@@ -303,6 +330,28 @@
 .loader_wrapper {
     display: none;
     height: calc(100vh - 152px);
+
+    &.loader__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #myProgress {
+        width: 100%;
+        background-color: #ddd;
+    }
+
+    #myBar {
+        width: 10%;
+        height: 30px;
+        background-color: #13a89e;
+        text-align: center;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .loader_inner {
@@ -352,10 +401,10 @@
 
 .btmIcon {
     position: fixed;
-    bottom: 0;
-    left: 75%;
-    transform: translateX(-50%);
-    z-index: 999999999999999999999999;
+    bottom: -15px;
+    right: 0;
+    transform: translateX(-75%);
+    z-index: 1000000000000000000000000;
     max-width: 300px;
     width: 100%;
     margin-left: auto;
@@ -405,6 +454,7 @@
         width: 45px;
         height: 45px;
         object-fit: contain;
+        cursor: pointer;
     }
 
     .sharpBorder {
@@ -462,6 +512,38 @@
             line-height: 1.29;
             letter-spacing: -.09px;
             font-weight: 500;
+        }
+
+        .cross {
+            position: absolute;
+            height: 16px;
+            width: 16px;
+            top: 5px;
+            right: 5px;
+            z-index: 999;
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: 16px;
+                width: 1px;
+                top: 0px;
+                right: 8px;
+                background-color: #999;
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                height: 16px;
+                width: 1px;
+                top: 0px;
+                right: 8px;
+                background-color: #999;
+                transform: rotate(-45deg);
+            }
         }
     }
 }
