@@ -373,28 +373,20 @@
     // Quiz page 
     #stepsForm fieldset {
         max-width: 800px;
-        height: calc(100% - 125px);
     }
 
     #stepsForm fieldset h2 span {
         left: -30px;
-    }
-
-    .steps_wrapper {
-        height: calc(100vh - 100px);
-    }
-    .loader_wrapper {
-        height: calc(100vh - 100px);
     }
     .btmIcon {
    transform: unset;
     }
     .btmIcon .notifyBadgeWrap {
         margin-left: auto;
-        right: 30px;
+        right: 20px;
     }
     .btmIcon .sharpBorder {
-        left: -30px;
+        left: -20px;
         margin-left: auto;
     }
     .btmIcon .iconText {
@@ -402,6 +394,9 @@
     }
     .btmIcon .btmIconInner {
         margin-bottom: 8px;
+    }
+    .btmIcon .sharpBorder::before {
+        bottom: 4px;
     }
 }
 
@@ -1055,7 +1050,7 @@
         font-size: 11px;
     }
 
-    .mainLogo {
+    .quizNavbar .mainLogo {
         max-width: 90px;
     }
 
@@ -1137,7 +1132,7 @@
       gap: 15px;
     }
     .btmIcon {
-        bottom: 0px;
+        bottom: 12px;
         right: 0;
         position: absolute;
         z-index: 9999;
@@ -1175,6 +1170,39 @@
         position: relative;
         z-index: 999999;
     }
+    .steps_wrapper{
+        height: calc(100vh - 66px);
+    }
+    .quizWrap {
+        margin-bottom: 30px;
+    }
+    .mainQuiz {
+        height: auto;
+    }
+    #stepsForm fieldset:nth-of-type(1) input.next.action-button {
+        width: calc(50% - 10px) !important;
+    }
+    .loader_wrapper .topBar {
+        padding: 15px;
+    }
+    .loader_wrapper .clientBox {
+        margin-bottom: 40px;
+        margin-top: 55px;
+        max-width: 320px;
+        padding: 25px 10px;
+    }
+    .loader_wrapper .clientBox .quoteImg {
+        width: 60px;
+    }
+    .loader_wrapper #myBar{
+        height: 30px;
+    }
+
+    .loader_wrapper.loader__wrapper {
+        position: fixed;
+        width: 100%;
+        top: 75px;
+    }
 }
 
 @media (max-width: 485.98px) {
@@ -1186,6 +1214,17 @@
 
 // `xsm` applies to x-small devices (portrait phones, less than 576px)
 @media (max-width: 385.98px) {
+    .footerWrap .contactLinks li a img{
+        width: 15px;
+    }
+    .footerWrap .contactLinks a {
+        gap: 3px;
+      font-size: 14px;
+    }
+    .productSlider .smallView {
+        height: 85px;
+    }
+    
     h2.productDescription {
         padding: 0 5px;
     }
@@ -1196,14 +1235,126 @@
     }
 
     .pricingBox .discountPrice {
-        flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
+        gap: 3px;
     }
 
     .productSlider .largeView {
         height: auto;
         object-fit: cover;
     }
+    .pricingBox .offPercent.percent40 {
+        height: 65px;
+        width: 55px;
+    }
+    .pricingBox .offPercent h1 {
+        font-size: 18px;
+    }
+    .pricingBox .offPercent h1 span {
+        font-size: 13px !important;
+    }
+    .pricingBox .discountPrice li img {
+        width: 95px;
+    }
+    .pricingBox .discountPrice li span {
+        font-size: 12px;
+    }
+    .pricingBox .newPrice h1 {
+        font-size: 38px;
+    }
+    .pricingBox .newPrice sup {
+        font-size: 10px;
+        top: 12px;
+        right: 12px;
+    }
+    .pricingBox .newPrice span {
+        font-size: 10px !important;
+    }
+    .pricingBox .youSave h3 {
+        font-size: 14px;
+    }
+    .pricingBox .youSave a {
+        font-size: 24px;
+    }
+    .pricingBox .addCart {
+        padding: 10px;
+        img{
+            width: 25px;
+        }
+    }
+    .pricingBox .addCart h2 {
+        font-size: 18px;
+    }
+    .pricingBox .freeShipping p {
+        font-size: 15px;
+    }
+    .pricingBox .bestValue p {
+        font-size: 14px;
+    }
+    .pricingBox .offPercent {
+        width: 60px;
+        height: 60px;
+    }
+    .pricingBox .discountPrice li:nth-of-type(2) {
+        max-width: 150px;
+        width: 100%;
+    }
+    .pricingBox .savingDNA {
+        font-size: 9px;
+        max-width: 110px;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    .saleStock {
+        margin-top: 15px;
+        gap: 5px;
+        flex-direction: column;
+    }
+    .saleStock span {
+        width: 20px;
+        height: 2px;
+    }
+    .promiseWrap li {
+        max-width: 35px;
+    }
+    .productSteps .skin-type .skin-type-part img {
+        width: 25px;
+    }
+    .productSteps .research-detail {
+        gap: 20px;
+    }
+    p {
+        font-size: 15px;
+    }
+    .productSteps .approved-tag img {
+        max-width: 78px;
+    }
+    .ingredients-detail img {
+        width: 70px;
+    }
+    .ingredientsWrap .use-step {
+        font-size: 14px;
+        max-width: 65px;
+        padding: 3px;
+    }
+    .ingredientsWrap .ingredients-detail {
+        gap: 8px !important;
+    }
+    .ingredientsWrap li + li {
+        margin-top: 25px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    .accordianMain .accordion-button {
+        gap: 10px;
+        padding: 10px;
+        font-size: 16px;
+    }
+    .accordianMain .accordion-button::after {
+        background-size: 15px;
+    }
+    
 }
 
 @media (max-width: 300px) {

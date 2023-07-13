@@ -1805,6 +1805,10 @@ p {
   margin-top: clamp(20px, 2.8vw, 40px);
 }
 
+.mainQuiz {
+  height: 100vh;
+}
+
 .quizNavbar .navInner {
   padding: 5px 0;
 }
@@ -1813,9 +1817,6 @@ p {
   width: 100%;
 }
 
-.steps_wrapper {
-  height: calc(100vh - 106px);
-}
 .steps_wrapper .container {
   height: 100%;
 }
@@ -1834,11 +1835,19 @@ p {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  height: calc(100% - 140px);
 }
 #stepsForm fieldset:last-of-type input.next.action-button {
   opacity: 1 !important;
   pointer-events: inherit !important;
+}
+#stepsForm fieldset:nth-of-type(1) input.previous.action-button {
+  display: none;
+}
+#stepsForm fieldset:nth-of-type(1) input.next.action-button {
+  width: 100%;
+}
+#stepsForm fieldset:nth-of-type(1) .stepsButtons {
+  max-width: 100%;
 }
 #stepsForm fieldset h2 span {
   position: absolute;
@@ -1957,6 +1966,9 @@ p {
 
 #stepsForm .action-button {
   width: calc(50% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 50px;
   cursor: pointer;
   border-radius: 100px;
@@ -1968,6 +1980,9 @@ p {
   text-align: center;
   transition: all 0.2s ease-in-out;
   color: #000;
+  letter-spacing: -0.5px;
+  box-shadow: 0 12px 60px 0 rgba(103, 57, 182, 0.08);
+  text-transform: uppercase;
 }
 
 #stepsForm input.previous.action-button {
@@ -2086,26 +2101,82 @@ p {
 /*loader section*/
 .loader_wrapper {
   display: none;
-  height: calc(100vh - 152px);
 }
 .loader_wrapper.loader__wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: block;
 }
 .loader_wrapper #myProgress {
   width: 100%;
-  background-color: #ddd;
+  background-color: rgba(19, 168, 158, 0.1);
+  border-radius: 15px;
 }
 .loader_wrapper #myBar {
   width: 10%;
-  height: 30px;
+  height: 40px;
   background-color: #13a89e;
   text-align: center;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  align-items: center;
+  border-radius: 15px;
+}
+.loader_wrapper .topBar {
+  background-color: #13a89e;
+  font-size: clamp(20px, 1.8vw, 32px);
+  padding: 20px;
+  color: #fff;
+  max-width: 800px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+.loader_wrapper .clientBox {
+  margin-bottom: 50px;
+  margin-top: 70px;
+  border: 1px solid rgb(161, 155, 155);
+  box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.23);
+  max-width: 500px;
+  width: 100%;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 15px;
+  text-align: center;
+  border-radius: 15px;
+  position: relative;
+}
+.loader_wrapper .clientBox .quoteImg {
+  background-color: #fff;
+  position: absolute;
+  width: 80px;
+  top: 0;
+  left: 30px;
+  transform: translateY(-50%);
+  padding: 0 10px;
+}
+.loader_wrapper .clientBox .quoteImg img {
+  width: 100%;
+}
+.loader_wrapper .clientBox h2 {
+  color: #000;
+}
+.loader_wrapper .clientBox h2:last-of-type {
+  color: rgb(161, 155, 155);
+}
+.loader_wrapper .clientImg {
+  max-width: 215px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+.loader_wrapper .starRow {
+  margin: 15px 0;
 }
 
 .loader_inner {
@@ -2152,7 +2223,7 @@ p {
 }
 .btmIcon {
   position: fixed;
-  bottom: -15px;
+  bottom: 0px;
   right: 0;
   transform: translateX(-75%);
   z-index: 1000000000000000000000000;
@@ -2177,8 +2248,8 @@ p {
   font-size: 12px;
   color: #fff;
   position: absolute;
-  right: -5px;
-  top: -3px;
+  right: 0px;
+  top: 0px;
   transform: translate(0%, -50%);
   height: 18px;
   width: 18px;
@@ -2197,7 +2268,7 @@ p {
 .btmIcon .btmIconImg {
   width: 45px;
   height: 45px;
-  object-fit: contain;
+  object-fit: cover;
   cursor: pointer;
 }
 .btmIcon .sharpBorder {
@@ -2572,26 +2643,19 @@ p {
   }
   #stepsForm fieldset {
     max-width: 800px;
-    height: calc(100% - 125px);
   }
   #stepsForm fieldset h2 span {
     left: -30px;
-  }
-  .steps_wrapper {
-    height: calc(100vh - 100px);
-  }
-  .loader_wrapper {
-    height: calc(100vh - 100px);
   }
   .btmIcon {
     transform: unset;
   }
   .btmIcon .notifyBadgeWrap {
     margin-left: auto;
-    right: 30px;
+    right: 20px;
   }
   .btmIcon .sharpBorder {
-    left: -30px;
+    left: -20px;
     margin-left: auto;
   }
   .btmIcon .iconText {
@@ -2599,6 +2663,9 @@ p {
   }
   .btmIcon .btmIconInner {
     margin-bottom: 8px;
+  }
+  .btmIcon .sharpBorder::before {
+    bottom: 4px;
   }
 }
 @media (max-width: 991.98px) {
@@ -3101,7 +3168,7 @@ p {
   .quantityWrap li .bottlesImg::before {
     font-size: 11px;
   }
-  .mainLogo {
+  .quizNavbar .mainLogo {
     max-width: 90px;
   }
   .quantityWrap li:nth-of-type(1) div:nth-of-type(1) {
@@ -3168,7 +3235,7 @@ p {
     gap: 15px;
   }
   .btmIcon {
-    bottom: 0px;
+    bottom: 12px;
     right: 0;
     position: absolute;
     z-index: 9999;
@@ -3206,6 +3273,38 @@ p {
     position: relative;
     z-index: 999999;
   }
+  .steps_wrapper {
+    height: calc(100vh - 66px);
+  }
+  .quizWrap {
+    margin-bottom: 30px;
+  }
+  .mainQuiz {
+    height: auto;
+  }
+  #stepsForm fieldset:nth-of-type(1) input.next.action-button {
+    width: calc(50% - 10px) !important;
+  }
+  .loader_wrapper .topBar {
+    padding: 15px;
+  }
+  .loader_wrapper .clientBox {
+    margin-bottom: 40px;
+    margin-top: 55px;
+    max-width: 320px;
+    padding: 25px 10px;
+  }
+  .loader_wrapper .clientBox .quoteImg {
+    width: 60px;
+  }
+  .loader_wrapper #myBar {
+    height: 30px;
+  }
+  .loader_wrapper.loader__wrapper {
+    position: fixed;
+    width: 100%;
+    top: 75px;
+  }
 }
 @media (max-width: 485.98px) {
   .productSlider .largeView {
@@ -3214,6 +3313,16 @@ p {
   }
 }
 @media (max-width: 385.98px) {
+  .footerWrap .contactLinks li a img {
+    width: 15px;
+  }
+  .footerWrap .contactLinks a {
+    gap: 3px;
+    font-size: 14px;
+  }
+  .productSlider .smallView {
+    height: 85px;
+  }
   h2.productDescription {
     padding: 0 5px;
   }
@@ -3222,12 +3331,123 @@ p {
     width: 120px;
   }
   .pricingBox .discountPrice {
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 3px;
   }
   .productSlider .largeView {
     height: auto;
     object-fit: cover;
+  }
+  .pricingBox .offPercent.percent40 {
+    height: 65px;
+    width: 55px;
+  }
+  .pricingBox .offPercent h1 {
+    font-size: 18px;
+  }
+  .pricingBox .offPercent h1 span {
+    font-size: 13px !important;
+  }
+  .pricingBox .discountPrice li img {
+    width: 95px;
+  }
+  .pricingBox .discountPrice li span {
+    font-size: 12px;
+  }
+  .pricingBox .newPrice h1 {
+    font-size: 38px;
+  }
+  .pricingBox .newPrice sup {
+    font-size: 10px;
+    top: 12px;
+    right: 12px;
+  }
+  .pricingBox .newPrice span {
+    font-size: 10px !important;
+  }
+  .pricingBox .youSave h3 {
+    font-size: 14px;
+  }
+  .pricingBox .youSave a {
+    font-size: 24px;
+  }
+  .pricingBox .addCart {
+    padding: 10px;
+  }
+  .pricingBox .addCart img {
+    width: 25px;
+  }
+  .pricingBox .addCart h2 {
+    font-size: 18px;
+  }
+  .pricingBox .freeShipping p {
+    font-size: 15px;
+  }
+  .pricingBox .bestValue p {
+    font-size: 14px;
+  }
+  .pricingBox .offPercent {
+    width: 60px;
+    height: 60px;
+  }
+  .pricingBox .discountPrice li:nth-of-type(2) {
+    max-width: 150px;
+    width: 100%;
+  }
+  .pricingBox .savingDNA {
+    font-size: 9px;
+    max-width: 110px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  .saleStock {
+    margin-top: 15px;
+    gap: 5px;
+    flex-direction: column;
+  }
+  .saleStock span {
+    width: 20px;
+    height: 2px;
+  }
+  .promiseWrap li {
+    max-width: 35px;
+  }
+  .productSteps .skin-type .skin-type-part img {
+    width: 25px;
+  }
+  .productSteps .research-detail {
+    gap: 20px;
+  }
+  p {
+    font-size: 15px;
+  }
+  .productSteps .approved-tag img {
+    max-width: 78px;
+  }
+  .ingredients-detail img {
+    width: 70px;
+  }
+  .ingredientsWrap .use-step {
+    font-size: 14px;
+    max-width: 65px;
+    padding: 3px;
+  }
+  .ingredientsWrap .ingredients-detail {
+    gap: 8px !important;
+  }
+  .ingredientsWrap li + li {
+    margin-top: 25px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  .accordianMain .accordion-button {
+    gap: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .accordianMain .accordion-button::after {
+    background-size: 15px;
   }
 }
 @media (max-width: 300px) {
@@ -3237,4 +3457,4 @@ p {
     margin-top: 30px;
     margin-bottom: 10px;
   }
-}/*# sourceMappingURL=style.css.map */
+}

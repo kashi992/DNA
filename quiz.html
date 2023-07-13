@@ -17,347 +17,403 @@
 </head>
 
 <body>
-    <div class="quizNavbar">
-    <!-- navbar start  -->
-    <header class="navWrap">
-        <div class="container">
-            <div class="navInner justify-content-center">
-                <div class="mainLogo">
-                    <img src="./assets/img/DNA_Logo.png" alt="" />
+    <div class="mainQuiz">
+        <div class="quizNavbar">
+            <!-- navbar start  -->
+            <header class="navWrap">
+                <div class="container">
+                    <div class="navInner justify-content-center">
+                        <div class="mainLogo">
+                            <img src="./assets/img/DNA_Logo.png" alt />
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </header>
+            <!-- navbar end -->
         </div>
-    </header>
-    <!-- navbar end -->
-    </div>
-    <!-- steps indicator start  -->
-    <div class="steps_wrapper">
-        <div class="container">
-            <!-- multistep form -->
-            <div id="stepsForm">
-                <!-- progressbar -->
+        <!-- steps indicator start  -->
+        <div class="steps_wrapper">
+            <div class="container">
+                <!-- multistep form -->
+                <div id="stepsForm">
+                    <!-- progressbar -->
 
-                <ul id="progressbar">
-                    <li class="active"></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <div class="stepForm_title">
-                    <h1 class="fs32">
-                        Answer the following questions and save up to 40%:
-                    </h1>
+                    <ul id="progressbar">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <div class="stepForm_title">
+                        <h1 class="fs32">
+                            Answer the following questions and save up to
+                            40%:
+                        </h1>
+                    </div>
+                    <!-- fieldsets -->
+                    <fieldset>
+                        <div class="d-flex flex-column h-100">
+                            <h2>
+                                <span>1
+                                    <svg height="10" width="11">
+                                        <path d="M7.586 5L4.293 1.707 5.707.293 10.414 5 5.707 9.707 4.293 8.293z"
+                                            fill="#13a89e"></path>
+                                        <path d="M8 4v2H0V4z" fill="#13a89e"></path>
+                                    </svg>
+                                </span>
+                                How old are you?
+                            </h2>
+                            <div class="quizWrap">
+                                <ul class="quizItems">
+                                    <li class>
+                                        <div class="list-key">
+                                            <span>key</span>
+                                            A
+                                        </div>
+                                        <p>Under 30 years</p>
+                                        <span class="list-icon">
+                                            <svg height="13" width="16">
+                                                <path
+                                                    d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+                                                    fill="#13a89e"></path>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                    <li class="active">
+                                        <div class="list-key">
+                                            <span>key</span>
+                                            B
+                                        </div>
+                                        <p>30-39 years</p>
+                                        <span class="list-icon">
+                                            <svg height="13" width="16">
+                                                <path
+                                                    d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+                                                    fill="#13a89e"></path>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <div class="list-key">
+                                            <span>key</span>
+                                            C
+                                        </div>
+                                        <p>40-49 years</p>
+                                        <span class="list-icon">
+                                            <svg height="13" width="16">
+                                                <path
+                                                    d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+                                                    fill="#13a89e"></path>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <div class="list-key">
+                                            <span>key</span>
+                                            D
+                                        </div>
+                                        <p>50-59 years</p>
+                                        <span class="list-icon">
+                                            <svg height="13" width="16">
+                                                <path
+                                                    d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+                                                    fill="#13a89e"></path>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <div class="list-key">
+                                            <span>key</span>
+                                            E
+                                        </div>
+                                        <p>Over 60 years</p>
+                                        <span class="list-icon">
+                                            <svg height="13" width="16">
+                                                <path
+                                                    d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+                                                    fill="#13a89e"></path>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-auto">
+                                <div class="stepsButtons">
+                                    <input type="button" name="previous" class="previous action-button" value="Back" />
+                                    <input type="button" name="next" class="next action-button" value="NEXT" />
+                                </div>
+                                <div class="btmIcon">
+                                    <div class="btmIconInner">
+                                        <div class="iconText">
+                                            <span> DNA Complex: </span>
+                                            <p>
+                                                Hi there :) <br />
+                                                This should take less than 3
+                                                minutes.
+                                            </p>
+                                            <div class="cross"></div>
+                                        </div>
+                                        <div class="sharpBorder"></div>
+                                    </div>
+                                    <div class="notifyBadgeWrap">
+                                        <div class="notifyBadge">1</div>
+                                        <img src="assets/img/popupIcon.jpg" alt class="btmIconImg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <div class="d-flex flex-column h-100">
+                            <h2>
+                                <span>2
+                                    <svg height="10" width="11">
+                                        <path d="M7.586 5L4.293 1.707 5.707.293 10.414 5 5.707 9.707 4.293 8.293z"
+                                            fill="#13a89e"></path>
+                                        <path d="M8 4v2H0V4z" fill="#13a89e"></path>
+                                    </svg>
+                                </span>
+                                What is your biggest skin-related concern?
+                            </h2>
+                            <div class="quizWrap">
+                                <ul class="quizItems">
+                                    <li>
+                                        <div class="list-key">
+                                            <span>key</span>
+                                            A
+                                        </div>
+                                        <p>Wrinkles</p>
+                                        <span class="list-icon">
+                                            <svg height="13" width="16">
+                                                <path
+                                                    d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+                                                    fill="#13a89e"></path>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <div class="list-key">
+                                            <span>key</span>
+                                            B
+                                        </div>
+                                        <p>Fine lines</p>
+                                        <span class="list-icon">
+                                            <svg height="13" width="16">
+                                                <path
+                                                    d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+                                                    fill="#13a89e"></path>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <div class="list-key">
+                                            <span>key</span>
+                                            C
+                                        </div>
+                                        <p>Crêpe skin</p>
+                                        <span class="list-icon">
+                                            <svg height="13" width="16">
+                                                <path
+                                                    d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+                                                    fill="#13a89e"></path>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <div class="list-key">
+                                            <span>key</span>
+                                            D
+                                        </div>
+                                        <p>Saggy skin</p>
+                                        <span class="list-icon">
+                                            <svg height="13" width="16">
+                                                <path
+                                                    d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+                                                    fill="#13a89e"></path>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <div class="list-key">
+                                            <span>key</span>
+                                            E
+                                        </div>
+                                        <p>Patchy skin</p>
+                                        <span class="list-icon">
+                                            <svg height="13" width="16">
+                                                <path
+                                                    d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+                                                    fill="#13a89e"></path>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <div class="list-key">
+                                            <span>key</span>
+                                            F
+                                        </div>
+                                        <p>Other</p>
+                                        <span class="list-icon">
+                                            <svg height="13" width="16">
+                                                <path
+                                                    d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+                                                    fill="#13a89e"></path>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-auto">
+                                <div class="stepsButtons">
+                                    <input type="button" name="previous" class="previous action-button" value="Back" />
+                                    <input type="button" name="next" class="next action-button" value="NEXT" />
+                                </div>
+                                <div class="btmIcon">
+                                    <div class="btmIconInner">
+                                        <div class="iconText">
+                                            <span> DNA Complex: </span>
+                                            <p>
+                                                Hi there :) <br />
+                                                This should take less than 3
+                                                minutes.
+                                            </p>
+                                        </div>
+                                        <div class="sharpBorder"></div>
+                                    </div>
+                                    <div class="notifyBadgeWrap">
+                                        <div class="notifyBadge">1</div>
+                                        <img src="assets/img/popupIcon.jpg" alt class="btmIconImg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="d-flex flex-column h-100">
+                            <h2>
+                                <span>3
+                                    <svg height="10" width="11">
+                                        <path d="M7.586 5L4.293 1.707 5.707.293 10.414 5 5.707 9.707 4.293 8.293z"
+                                            fill="#13a89e"></path>
+                                        <path d="M8 4v2H0V4z" fill="#13a89e"></path>
+                                    </svg>
+                                </span>
+                                I want to...
+                            </h2>
+                            <div class="quizWrap">
+                                <ul class="quizItems">
+                                    <li>
+                                        <div class="list-key">
+                                            <span>key</span>
+                                            A
+                                        </div>
+                                        <p>Maintain my skin</p>
+                                        <span class="list-icon">
+                                            <svg height="13" width="16">
+                                                <path
+                                                    d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+                                                    fill="#13a89e"></path>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                    <li class="active">
+                                        <div class="list-key">
+                                            <span>key</span>
+                                            B
+                                        </div>
+                                        <p>Visibly reduce signs of aging</p>
+                                        <span class="list-icon">
+                                            <svg height="13" width="16">
+                                                <path
+                                                    d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+                                                    fill="#13a89e"></path>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <div class="list-key">
+                                            <span>key</span>
+                                            C
+                                        </div>
+                                        <p>Banish my aging skin altogether</p>
+                                        <span class="list-icon">
+                                            <svg height="13" width="16">
+                                                <path
+                                                    d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
+                                                    fill="#13a89e"></path>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-auto">
+                                <div class="stepsButtons">
+                                    <input type="button" name="previous" class="previous action-button" value="Back" />
+                                    <input type="button" name="next" class="next action-button" value="NEXT" />
+                                </div>
+                                <div class="btmIcon">
+                                    <div class="btmIconInner">
+                                        <div class="iconText">
+                                            <span> DNA Complex: </span>
+                                            <p>
+                                                Hi there :) <br />
+                                                This should take less than 3
+                                                minutes.
+                                            </p>
+                                        </div>
+                                        <div class="sharpBorder"></div>
+                                    </div>
+                                    <div class="notifyBadgeWrap">
+                                        <div class="notifyBadge">1</div>
+                                        <img src="assets/img/popupIcon.jpg" alt class="btmIconImg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
                 </div>
-                <!-- fieldsets -->
-                <fieldset>
-                    <div class="d-flex flex-column h-100">
-                        <h2>
-                            <span>1
-                                <svg height="10" width="11">
-                                    <path d="M7.586 5L4.293 1.707 5.707.293 10.414 5 5.707 9.707 4.293 8.293z"
-                                        fill="#13a89e"></path>
-                                    <path d="M8 4v2H0V4z" fill="#13a89e"></path>
-                                </svg>
-                            </span>
-                            How old are you?
-                        </h2>
-                        <div class="quizWrap">
-                            <ul class="quizItems">
-                                <li class="">
-                                    <div class="list-key">
-                                        <span>key</span>
-                                        A
-                                    </div>
-                                    <p>Under 30 years</p>
-                                    <span class="list-icon">
-                                        <svg height="13" width="16">
-                                            <path d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
-                                                fill="#13a89e"></path>
-                                        </svg>
-                                    </span>
-                                </li>
-                                <li class="active">
-                                    <div class="list-key">
-                                        <span>key</span>
-                                        B
-                                    </div>
-                                    <p>30-39 years</p>
-                                    <span class="list-icon">
-                                        <svg height="13" width="16">
-                                            <path d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
-                                                fill="#13a89e"></path>
-                                        </svg>
-                                    </span>
-                                </li>
-                                <li>
-                                    <div class="list-key">
-                                        <span>key</span>
-                                        C
-                                    </div>
-                                    <p>40-49 years</p>
-                                    <span class="list-icon">
-                                        <svg height="13" width="16">
-                                            <path d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
-                                                fill="#13a89e"></path>
-                                        </svg>
-                                    </span>
-                                </li>
-                                <li>
-                                    <div class="list-key">
-                                        <span>key</span>
-                                        D
-                                    </div>
-                                    <p>50-59 years</p>
-                                    <span class="list-icon">
-                                        <svg height="13" width="16">
-                                            <path d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
-                                                fill="#13a89e"></path>
-                                        </svg>
-                                    </span>
-                                </li>
-                                <li>
-                                    <div class="list-key">
-                                        <span>key</span>
-                                        E
-                                    </div>
-                                    <p>Over 60 years</p>
-                                    <span class="list-icon">
-                                        <svg height="13" width="16">
-                                            <path d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
-                                                fill="#13a89e"></path>
-                                        </svg>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="stepsButtons">
-                            <input type="button" name="previous" class="previous action-button" value="Back" />
-                            <input type="button" name="next" class="next action-button" value="NEXT" />
-                        </div>
-                        <div class="btmIcon">
-                            <div class="btmIconInner">
-                                <div class="iconText">
-                                    <span> DNA Complex: </span>
-                                    <p>Hi there :) <br>
-                                        This should take less than 3 minutes.</p>
-                                        <div class="cross"></div>
-                                </div>
-                                <div class="sharpBorder"></div>
-                            </div>
-                            <div class="notifyBadgeWrap">
-                                <div class="notifyBadge">1</div>
-                            <img src="assets/img/btmIcon2.svg" alt="" class="btmIconImg">
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
 
-                <fieldset>
-                    <div class="d-flex flex-column h-100">
-                        <h2>
-                            <span>2
-                                <svg height="10" width="11">
-                                    <path d="M7.586 5L4.293 1.707 5.707.293 10.414 5 5.707 9.707 4.293 8.293z"
-                                        fill="#13a89e"></path>
-                                    <path d="M8 4v2H0V4z" fill="#13a89e"></path>
-                                </svg>
-                            </span>
-                            What is your biggest skin-related concern?
-                        </h2>
-                        <div class="quizWrap">
-                            <ul class="quizItems">
-                                <li>
-                                    <div class="list-key">
-                                        <span>key</span>
-                                        A
-                                    </div>
-                                    <p>Wrinkles</p>
-                                    <span class="list-icon">
-                                        <svg height="13" width="16">
-                                            <path d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
-                                                fill="#13a89e"></path>
-                                        </svg>
-                                    </span>
-                                </li>
-                                <li>
-                                    <div class="list-key">
-                                        <span>key</span>
-                                        B
-                                    </div>
-                                    <p>Fine lines</p>
-                                    <span class="list-icon">
-                                        <svg height="13" width="16">
-                                            <path d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
-                                                fill="#13a89e"></path>
-                                        </svg>
-                                    </span>
-                                </li>
-                                <li>
-                                    <div class="list-key">
-                                        <span>key</span>
-                                        C
-                                    </div>
-                                    <p>Crêpe skin</p>
-                                    <span class="list-icon">
-                                        <svg height="13" width="16">
-                                            <path d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
-                                                fill="#13a89e"></path>
-                                        </svg>
-                                    </span>
-                                </li>
-                                <li>
-                                    <div class="list-key">
-                                        <span>key</span>
-                                        D
-                                    </div>
-                                    <p>Saggy skin</p>
-                                    <span class="list-icon">
-                                        <svg height="13" width="16">
-                                            <path d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
-                                                fill="#13a89e"></path>
-                                        </svg>
-                                    </span>
-                                </li>
-                                <li>
-                                    <div class="list-key">
-                                        <span>key</span>
-                                        E
-                                    </div>
-                                    <p>Patchy skin</p>
-                                    <span class="list-icon">
-                                        <svg height="13" width="16">
-                                            <path d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
-                                                fill="#13a89e"></path>
-                                        </svg>
-                                    </span>
-                                </li>
-                                <li>
-                                    <div class="list-key">
-                                        <span>key</span>
-                                        F
-                                    </div>
-                                    <p>Other</p>
-                                    <span class="list-icon">
-                                        <svg height="13" width="16">
-                                            <path d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
-                                                fill="#13a89e"></path>
-                                        </svg>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="stepsButtons">
-                            <input type="button" name="previous" class="previous action-button" value="Back" />
-                            <input type="button" name="next" class="next action-button" value="NEXT" />
-                        </div>
-                        <div class="btmIcon">
-                            <div class="btmIconInner">
-                                <div class="iconText">
-                                    <span> DNA Complex: </span>
-                                    <p>Hi there :) <br>
-                                        This should take less than 3 minutes.</p>
-                                </div>
-                                <div class="sharpBorder"></div>
-                            </div>
-                            <div class="notifyBadgeWrap">
-                                <div class="notifyBadge">1</div>
-                            <img src="assets/img/btmIcon2.svg" alt="" class="btmIconImg">
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <div class="d-flex flex-column h-100">
-                        <h2>
-                            <span>3
-                                <svg height="10" width="11">
-                                    <path d="M7.586 5L4.293 1.707 5.707.293 10.414 5 5.707 9.707 4.293 8.293z"
-                                        fill="#13a89e"></path>
-                                    <path d="M8 4v2H0V4z" fill="#13a89e"></path>
-                                </svg>
-                            </span>
-                            I want to...
-                        </h2>
-                        <div class="quizWrap">
-                            <ul class="quizItems">
-                                <li>
-                                    <div class="list-key">
-                                        <span>key</span>
-                                        A
-                                    </div>
-                                    <p>Maintain my skin</p>
-                                    <span class="list-icon">
-                                        <svg height="13" width="16">
-                                            <path d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
-                                                fill="#13a89e"></path>
-                                        </svg>
-                                    </span>
-                                </li>
-                                <li class="active">
-                                    <div class="list-key">
-                                        <span>key</span>
-                                        B
-                                    </div>
-                                    <p>Visibly reduce signs of aging</p>
-                                    <span class="list-icon">
-                                        <svg height="13" width="16">
-                                            <path d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
-                                                fill="#13a89e"></path>
-                                        </svg>
-                                    </span>
-                                </li>
-                                <li>
-                                    <div class="list-key">
-                                        <span>key</span>
-                                        C
-                                    </div>
-                                    <p>Banish my aging skin altogether</p>
-                                    <span class="list-icon">
-                                        <svg height="13" width="16">
-                                            <path d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"
-                                                fill="#13a89e"></path>
-                                        </svg>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="stepsButtons">
-                            <input type="button" name="previous" class="previous action-button" value="Back" />
-                            <input type="button" name="next" class="next action-button" value="NEXT" />
-                        </div>
-                        <div class="btmIcon">
-                            <div class="btmIconInner">
-                                <div class="iconText">
-                                    <span> DNA Complex: </span>
-                                    <p>Hi there :) <br>
-                                        This should take less than 3 minutes.</p>
-                                </div>
-                                <div class="sharpBorder"></div>
-                            </div>
-                            <div class="notifyBadgeWrap">
-                                <div class="notifyBadge">1</div>
-                            <img src="assets/img/btmIcon2.svg" alt="" class="btmIconImg">
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
             </div>
             <!-- loader section start -->
             <section class="loader_wrapper">
                 <!-- <div class="loader_inner">
-                    <div class="loaderMain"></div>
-                </div> -->
-                <h1 class="fs32 mb15 text-center">Calculating your match</h1>
+                <div class="loaderMain"></div>
+            </div> -->
+                <div class="topBar">
+                    85% felt less cravings and were better able to
+                    manage their
+                    appetite after 4 weeks
+                </div>
+                <div class="clientBox">
+                    <div class="clientImg">
+                        <img src="assets/img/clientImg.png" alt />
+                    </div>
+                    <h2>
+                        I have seen great result within 2 weeks by
+                        energy level and
+                        digestion improved messively
+                    </h2>
+                    <div class="starRow">
+                        <img src="assets/img/starsRow.png" alt />
+                    </div>
+                    <h2 class="text-center text-uppercase">Abby K.</h2>
+                    <div class="quoteImg">
+                        <img src="./assets/img/quoteImg.svg" alt="">
+                    </div>
+                </div>
+                <h1 class="fs32 mb15 text-center text-uppercase">
+                    Calculating your match
+                </h1>
                 <div id="myProgress">
                     <div id="myBar">10%</div>
-                  </div>
+                </div>
             </section>
             <!-- loader section start -->
         </div>
+        <!-- steps indicator end -->
     </div>
-    <!-- steps indicator end -->
-
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

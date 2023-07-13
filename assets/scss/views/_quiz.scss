@@ -1,3 +1,6 @@
+.mainQuiz{
+    height: 100vh;
+}
 .quizNavbar {
     .navInner {
         padding: 5px 0;
@@ -10,8 +13,6 @@
 }
 
 .steps_wrapper {
-    height: calc(100vh - 106px);
-
     .container {
         height: 100%;
     }
@@ -32,7 +33,6 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    height: calc(100% - 140px);
 
     &:last-of-type {
         input.next.action-button {
@@ -40,6 +40,18 @@
             pointer-events: inherit !important;
         }
     }
+    &:nth-of-type(1){
+        input.previous.action-button {
+           display: none;
+        }
+        input.next.action-button {
+           width: 100%;
+        }
+        .stepsButtons{
+            max-width: 100%;
+        }
+    }
+
 
     h2 {
         span {
@@ -185,6 +197,9 @@
 
 #stepsForm .action-button {
     width: calc(50% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50px;
     cursor: pointer;
     border-radius: 100px;
@@ -196,6 +211,9 @@
     text-align: center;
     transition: all 0.2s ease-in-out;
     color: #000;
+    letter-spacing: -.5px;
+    box-shadow: 0 12px 60px 0 rgba(103,57,182,.08);
+    text-transform: uppercase;
 }
 
 #stepsForm input.previous.action-button {
@@ -329,29 +347,91 @@
 /*loader section*/
 .loader_wrapper {
     display: none;
-    height: calc(100vh - 152px);
-
+    
     &.loader__wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    //     height: calc(100vh - 152px);
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     position: fixed;
+    // width: 100%;
+    // left: 0;
+    display: block;
     }
 
     #myProgress {
         width: 100%;
-        background-color: #ddd;
+        background-color: rgba(19, 168, 158, 0.1);
+        border-radius: 15px;
     }
 
     #myBar {
         width: 10%;
-        height: 30px;
+        height: 40px;
         background-color: #13a89e;
         text-align: center;
         color: #fff;
         display: flex;
         justify-content: center;
         align-items: center;
+        align-items: center;
+    border-radius: 15px;
     }
+    .topBar{
+        background-color: #13a89e;
+        font-size: clamp(20px, 1.8vw, 32px);
+        padding: 20px;
+        color: #fff;
+        max-width: 800px;
+        width: 100%;
+        margin-left: auto;margin-right: auto;
+        line-height: 1.2;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .clientBox{
+        margin-bottom: 50px;
+        margin-top: 70px;
+        border: 1px solid rgb(161, 155, 155);
+        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .23);
+        max-width: 500px;
+        width: 100%;
+        background-color: #fff;
+        margin-left: auto;margin-right: auto;
+        padding: 30px 15px;
+        text-align: center;
+        border-radius: 15px;
+        position: relative;
+        .quoteImg{
+            background-color: #fff;
+            position: absolute;
+            width: 80px;
+            top: 0;
+            left: 30px;
+            transform: translateY(-50%);
+            padding: 0 10px;
+            img{
+                width: 100%;
+            }
+        }
+        h2{
+            color: #000;
+        &:last-of-type{
+            color: rgb(161, 155, 155);
+        }
+        }
+    }
+    .clientImg{
+        max-width: 215px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    }
+    .starRow{
+        margin: 15px 0;
+    }
+    
 }
 
 .loader_inner {
@@ -401,7 +481,7 @@
 
 .btmIcon {
     position: fixed;
-    bottom: -15px;
+    bottom: 0px;
     right: 0;
     transform: translateX(-75%);
     z-index: 1000000000000000000000000;
@@ -431,8 +511,8 @@
         font-size: 12px;
         color: #fff;
         position: absolute;
-        right: -5px;
-        top: -3px;
+        right: 0px;
+        top: 0px;
         transform: translate(0%, -50%);
         height: 18px;
         width: 18px;
@@ -453,7 +533,7 @@
     .btmIconImg {
         width: 45px;
         height: 45px;
-        object-fit: contain;
+        object-fit: cover;
         cursor: pointer;
     }
 

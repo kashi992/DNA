@@ -303,7 +303,7 @@ $(document).ready(function () {
         setTimeout(function () {
           window.location.href = "index.html";
         }, 1000); // Redirect after 3 seconds
-      }, 10); // Show the last fieldset for 3 seconds
+      }, 500); // Show the last fieldset for 3 seconds
     }
   });
 
