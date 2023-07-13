@@ -127,3 +127,10 @@ margin-bottom: 15px !important;
     transform: rotate(45deg);
     width: 15px;
 }
+
+#show-button a{
+    display: none;
+  }
+  #show-button.ShowMeButton a{
+    display: block;
+  }

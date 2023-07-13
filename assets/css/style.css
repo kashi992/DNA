@@ -277,6 +277,14 @@ ul {
   width: 15px;
 }
 
+#show-button a {
+  display: none;
+}
+
+#show-button.ShowMeButton a {
+  display: block;
+}
+
 h1 {
   font-weight: 700;
   font-size: clamp(30px, 2.8vw, 50px);
